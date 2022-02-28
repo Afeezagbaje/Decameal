@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.container .right-side{
+    width: 100%;
+    margin-top: 276px;
+}
+
+.reset-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.password{
+    width: 458px;
+    height: 71px;
+    border: 1px solid #1C1C1C;
+    border-radius: 5px;
+    padding-left: 30px;
+}
+
+.show_password{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6A6A6A;
+}
+.password-container{
+    position: relative;
+}
+
+.submit_button{
+    width: 488px;
+    height: 60px;
+    background: #1C1C1C;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
