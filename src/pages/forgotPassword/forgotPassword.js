@@ -10,13 +10,12 @@ const ForgotPassword = () => {
           <img className="logo" src={photo} alt="Forwordpassword.png" />
         </div>
         <div className="right_row">
-          <h1 className="title">Forgot Password!</h1>
+          <h1 className="title">ForgotPassword!</h1>
           <form>
             <input
               type="text"
               name="email"
               placeholder="Email"
-              // value={email}
             />
             <input
               className="button"
