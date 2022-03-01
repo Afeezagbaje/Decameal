@@ -1,15 +1,17 @@
+import { Box } from "@mui/material";
 import React from "react";
-import image from "../assets/img/1.png";
 import "./reset.css";
 
 const ResetPassword = () => {
   return (
     <div className="container">
-      <div className="left-side">
-        <img src={image} alt="reset-password-logo" className="logo" />
-      </div>
+      <Box
+        className="left-side"
+        sx={{ display: { xs: "none", md: "block" }, marginRight: "5px" }}
+      >
+      </Box>
 
-      <div className="right-side">
+      <Box className="right-side" sx={{}}>
         <h1 className="title">Reset Password!</h1>
         <div className="form_container">
           <form className="reset-form">
@@ -37,7 +39,7 @@ const ResetPassword = () => {
             />
           </form>
         </div>
-      </div>
+      </Box>
     </div>
   );
 };

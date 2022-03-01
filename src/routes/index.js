@@ -7,7 +7,7 @@ const App = () => (
   <Routes>
     <Route exact path="/" element={<Welcome />} />
     <Route exact path="/forgot-password" element={<ForgotPassword />} />
-    <Route exact path="/ResetPassword" element={<Reset />} />
+    <Route exact path="/reset-password" element={<Reset />} />
 
   </Routes>
 );
