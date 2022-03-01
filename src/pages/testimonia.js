@@ -7,7 +7,7 @@ import StarIcon from '@mui/icons-material/Star';
 
 const Testimonia= () => (
     <div className="images">
-        < KeyboardArrowLeftIcon fontSize="large"/>
+        < KeyboardArrowLeftIcon fontSize="large" className="arrow"/>
         
         <div ClassNames="image-div"> 
         
@@ -43,7 +43,7 @@ const Testimonia= () => (
             </center>
             
         </div>
-        <KeyboardArrowRightIcon fontSize="large"/>
+        <KeyboardArrowRightIcon fontSize="large" className="arrow"/>
     
      
     </div>

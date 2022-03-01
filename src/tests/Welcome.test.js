@@ -11,9 +11,9 @@ it("renders without crashing", () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-describe("Welcome", () => {
-  it("renders welcome message", () => {
-    const { getByText } = render(<Welcome />);
-    expect(getByText("Welcome to Decameal")).toBeInTheDocument();
-  });
-});
+// describe("Welcome", () => {
+//   it("renders welcome message", () => {
+//     const { getByText } = render(<Welcome />);
+//     expect(getByText("Welcome to Decameal")).toBeInTheDocument();
+//   });
+// });

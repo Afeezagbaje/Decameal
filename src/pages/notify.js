@@ -13,11 +13,8 @@ const Notify = () => (
         </div>
           
         <div className="notify-sub2"> 
-            
                 <input type="text" />
-                <button className="notify-button"><span className="button-text">Get notified</span></button>
-               
-            
+                <button className="notify-button"><span className="button-text">Get notified</span></button>   
         </div>   
     </div>
 
