@@ -1,13 +1,13 @@
-import React from 'react';
-import './list.css';
+import React from "react";
+import "./list.css";
 
-const List = ({listText, listTitle}) => {
+const List = ({ listText, listTitle }) => {
   return (
     <div className="footer-components">
       <h2>{listTitle}</h2>
-        <p>{listText}</p>
-        </div>
-  )
-}
+      <p>{listText}</p>
+    </div>
+  );
+};
 
-export default List
+export default List;
