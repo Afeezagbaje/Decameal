@@ -20,6 +20,9 @@
   background-size: cover;
 }
 
+.form-container{
+    max-width: 488px;
+}
 .reset-form {
   display: flex;
   flex-direction: column;
@@ -43,6 +46,7 @@
 .password-container {
   position: relative;
   width: 100%;
+  max-width: 500px;
 }
 
 .submit_button:hover {

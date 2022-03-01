@@ -43,7 +43,7 @@ const ResetPassword = () => {
               fullWidth
               type="submit"
               variant="contained"
-              sx={{ backgroundColor: "#1c1c1c", height: "60px" }}
+              sx={{ backgroundColor: "#1c1c1c", height: "60px", maxWidth: "500px" }}
               className="submit_button"
             >
               Reset
