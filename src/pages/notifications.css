@@ -1,20 +1,19 @@
 .images{
     margin: auto;
-    width: 80%;
+    width: 1230px;
     padding: 100px;
     height: 100px;
     display: flex;
+    margin-bottom: 100px;
+    
 }
 img{
-    /* margin: auto; */
     height: 50px;
     width: 50px;  
     margin-left: auto;
-    margin-right: auto;
-     
+    margin-right: auto; 
 }
 .images > div{
-    
     height: 100%;
     width: 100%;
 }
@@ -29,4 +28,59 @@ img{
     font-family: 'Oleo Script', cursive;
     color: #1C1C1C;
     font-weight: 400px;
+}
+.notify-main{
+    width: 1440px;
+    height: 435px;
+    background-color: #8EA739;
+    display: flex;
+    
+}
+.notify-sub{
+    padding-left: 60px;
+    padding-top: 80px;
+    width: 50%;
+    
+    
+}
+.notify-sub > h3{
+    font-family: Poppins;
+    font-size: 36px;
+    line-height: 33px;
+    font-weight: 700;
+}
+.notify-sub > small{
+    color: white;
+    font-size: 18px;
+    font-family: Poppins;
+    line-height: 33px;
+}
+.notify-sub2 {
+    width: 50%;
+    padding-top: 180px;
+}
+.notify-sub2 > input{
+    /* height: 45px; */
+    
+    width: 299px;
+    height: 51px;
+    background: #F7F7F7;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px;
+}
+.notify-button{
+    width: 182px;
+    height: 51px;
+    background: #1C1C1C;
+    border-radius: 5px;
+    color: white;
+    margin-left: 10px;
+}
+.button-text{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
 }

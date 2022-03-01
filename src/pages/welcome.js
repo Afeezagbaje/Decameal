@@ -1,4 +1,5 @@
-import Notifications from "./notifications"
+import Testimonia from "./testimonia"
+import Notify from "./notify";
 import { Container } from "@material-ui/core";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
@@ -6,9 +7,12 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
 const Welcome = () => (
     <Container>
-        <Notifications>
+        <Testimonia>
             <KeyboardArrowLeftIcon />
-        </Notifications>
+        </Testimonia>
+        <Notify> 
+
+        </Notify>
     </Container>
 );
 

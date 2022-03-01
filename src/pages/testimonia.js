@@ -5,7 +5,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import StarIcon from '@mui/icons-material/Star';
 
 
-const Notifications = () => (
+const Testimonia= () => (
     <div className="images">
         < KeyboardArrowLeftIcon fontSize="large"/>
         
@@ -52,4 +52,4 @@ const Notifications = () => (
 );
 
 
-export default Notifications;
+export default Testimonia;
