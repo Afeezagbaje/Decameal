@@ -23,32 +23,67 @@ h1{
 .parent-container{
     text-align: 'left';
     color: #FFFFFF;
-    margin-top: 240px;
-    margin-left: 6rem;
+    margin-top: 230px;
+    margin-left: 10rem;
     height: 100%;
     font-style: Poppins;
     font-weight: 700; 
-    font-size: 50px;
+    font-size: 70px;
     margin-left: 150px;
 
-}
-
-.paragraph-text{
-font-weight:450;
-font-size:24px;
-line-height:22.8px;
-border-top: 100px;
-width:550px;
-}
-
-.button{
-border-radius: 7px;
-width: 185px;
-color: #FFFFFF;
-background-color: #34A853;
-height: 53px;
-font-weight: 700;
-font-size: 17px;
-margin-top: 30px;
 
 }
+
+@media only screen and (max-width: 911px) {
+    .parent-container {
+        margin-left: 1.5rem;
+        margin-top: 70px;
+    }
+  }
+
+  
+  .paragraph-text{
+      padding: 0;
+      margin: 0;
+      font-weight:450;
+      font-size:24px;
+      line-height:22.8px;
+      border-top: 100px;
+      max-width:550px;
+      margin-top: 30px;   
+    }
+
+    @media only screen and (max-width: 629px) {
+        .parent-container {
+            font-size:40px;
+      }
+      .tophero-container  {
+          background-size: cover;
+      }
+    }
+
+    
+    @media only screen and (max-width: 629px) {
+        .paragraph-text {
+            font-size:18px;
+      }
+    }
+
+    @media only screen and (max-width: 605px) {
+        .paragraph-text {
+            font-size:14px;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .paragraph-text {
+            font-size:10px;
+      }
+    }
+
+    @media only screen and (max-width: 300px) {
+        .button {
+            font-size:14px;
+            background-size: 10px;
+      }
+    }
