@@ -6,7 +6,7 @@ import Welcome from '../pages/welcome';
 const App = () => (
   <Routes>
     <Route exact path="/" element={<Welcome />} />
-    <Route exact path="/forgotPassword" element={<ForgotPassword />} />
+    <Route exact path="/forgot-password" element={<ForgotPassword />} />
   </Routes>
 );
 

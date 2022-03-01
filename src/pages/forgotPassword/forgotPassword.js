@@ -6,8 +6,8 @@ const ForgotPassword = () => {
   return (
     <div className="forgot-password">
       <div className="container">
-        <div className="logo-container">
-          <img className="logo" src={photo} alt="Forwordpassword.png" />
+        <div className="image-container">
+          <img className="image" src={photo} alt="forgot-password" />
         </div>
         <div className="right_row">
           <h1 className="title">Forgot Password!</h1>
