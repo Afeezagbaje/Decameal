@@ -6,7 +6,7 @@
 }
 
 .right-side {
-  margin: 0 1rem;
+  margin: 0 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -28,11 +28,9 @@
 }
 
 .password {
-  width: 458px;
-  height: 71px;
+  max-width: 100%;
   border: 1px solid #1c1c1c;
   border-radius: 5px;
-  padding-left: 30px;
 }
 
 .show_password {
@@ -44,12 +42,9 @@
 }
 .password-container {
   position: relative;
+  width: 100%;
 }
 
-.submit_button {
-  width: 488px;
-  height: 60px;
-  background: #1c1c1c;
-  border-radius: 5px;
-  color: #ffffff;
+.submit_button:hover {
+  background-color: #333333 !important;
 }
