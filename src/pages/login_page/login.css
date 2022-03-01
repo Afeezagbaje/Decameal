@@ -58,7 +58,11 @@ input.submit_button {
     color: white;
 }
 
-p.forgot_password {
-    text-align: right;
+ .forgot_password {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
     width: 488px;
+    text-decoration: none;
+    /* color: black; */
 }

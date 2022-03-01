@@ -1,6 +1,10 @@
 import React from 'react'
 import './login.css' 
 import photo from '../../assets/login_image.png'
+import {Link} from 'react-router-dom'
+import { Box, Button, TextField, Typography} from "@mui/material"
+
+
 
 function Login() {
   return (
@@ -20,7 +24,8 @@ function Login() {
                         <span className="show_password">show</span>
                     </div>
                     <input className="submit_button" type="button" name="submit" value="Sign In" />
-                    <p className="forgot_password">Forgot Password</p>
+                    <Link to="/forgot_password" className="forgot_password"> <p>Forgot Password</p>
+                    </Link>
                 </form>
             </div>
         </div>

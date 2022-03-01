@@ -17,3 +17,4 @@ describe("Welcome", () => {
     expect(getByText("Welcome to Decameal")).toBeInTheDocument();
   });
 });
+
