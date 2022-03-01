@@ -7,9 +7,6 @@ footer {
 .footer-container {
   margin-left: 11rem;
 }
-.download {
-  margin-left: -6rem;
-}
 hr {
   height: 1px;
   position: absolute;
@@ -31,6 +28,9 @@ hr {
   .footer-list {
     flex-wrap: wrap;
     align-content: center;
+  }
+  .footer-container {
+    margin-left: 1rem;
   }
 }
 .footer-socials {
