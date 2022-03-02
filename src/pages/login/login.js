@@ -1,45 +1,74 @@
 import React from "react";
 import "./login.css";
-import photo from "../../assets/login_image.png";
+import { Link } from "react-router-dom";
+import { Box, Button, TextField, Typography } from "@mui/material";
+import { useState } from "react";
 
-function Login() {
+const Login = () => {
+  const [passwordShown, setPasswordShown] = useState(false);
   return (
-    <div className="container">
-      <div className="bg_container">
-        <img className="logo" src={photo} alt="Login_image.png" />
-      </div>
-
-      <div className="input_container">
-        <h1 className="title">Welcome!</h1>
-        <div className="form_container">
+    <Box className="container">
+      <Box
+        className="bg_container"
+        sx={{ display: { xs: "none", md: "block" }, marginRight: "5px" }}
+      ></Box>
+      <Box className="input_container">
+        <Typography
+          variant="h4"
+          sx={{ textAlign: "center", marginBottom: "3rem", fontWeight: "600" }}
+        >
+          Welcome!
+        </Typography>
+        <Box className="form_container">
           <form className="login_form">
-            <input
-              className="input_email"
-              type="text"
-              name="email"
-              placeholder="Email"
-            />
-            <div className="password_container">
-              <input
+            <Box className="password_container">
+              <TextField
+                fullWidth
+                variant="outlined"
+                type={"text"}
+                className="input_email"
+                placeholder="Email"
+              />
+            </Box>
+            <Box className="password_container">
+              <TextField
+                fullWidth
+                variant="outlined"
+                type={passwordShown ? "text" : "password"}
                 className="input_password"
-                type="text"
-                name="email"
                 placeholder="Password"
               />
-              <span className="show_password">show</span>
-            </div>
-            <input
+              <span
+                onClick={() => setPasswordShown(!passwordShown)}
+                className="show_password"
+              >
+                {passwordShown ? "Hide" : "Show"}
+              </span>
+            </Box>
+            <Button
+              fullWidth
+              type="submit"
+              variant="contained"
+              sx={{
+                backgroundColor: "#1c1c1c",
+                height: "60px",
+                maxWidth: "500px",
+              }}
               className="submit_button"
-              type="button"
-              name="submit"
-              value="Sign In"
-            />
-            <p className="forgot_password">Forgot Password</p>
+            >
+              Sign in
+            </Button>
+
+            <p className="forgot_password">
+              <Link className="forgot-password-link" to="/forgot-password">
+                Forgot Password?{" "}
+              </Link>
+            </p>
           </form>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
-}
+};
 
 export default Login;

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { render, cleanup, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import Login from "../pages/login_page/login";
+import Login from "../pages/login/login";
 import {BrowserRouter} from 'react-router-dom';
 
 
