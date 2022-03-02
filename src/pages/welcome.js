@@ -1,4 +1,3 @@
-import Footer from '../component/footer/Footer';
 
 const Welcome = () => (
   <div>
