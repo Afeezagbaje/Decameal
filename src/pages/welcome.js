@@ -10,6 +10,8 @@ const Welcome = () => (
       contact/message the kitchen staff and vise-versa, have a weekly meal time
       table and an admin dashboard
     </p>
+    <br />
+    <Footer />
   </div>
 );
 
