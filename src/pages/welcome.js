@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from "../store/hooks";
 import Testimonial from "../components/testimonial/testimonial";
 import Notification from "../components/notification/notification";
 import Footer from "../components/footer/Footer";
+import TopHero from "../components/topHero";
 
 const Welcome = () => {
   const dispatch = useAppDispatch();
@@ -18,6 +19,7 @@ const Welcome = () => {
 
   return (
     <div>
+      <TopHero />
       {users &&
         users.map((user, idx) => {
           return (
