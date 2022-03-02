@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { render, cleanup, screen } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import TopHero from "../components/top_hero";
+import TopHero from "../components/topHero";
 
 afterEach(cleanup);
 it("renders without crashing", () => {

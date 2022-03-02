@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { user } from "../store/slices/userSlice";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
+import TopHero from "../components/topHero";
 
 const Welcome = () => {
-
   const dispatch = useAppDispatch();
 
   const usersData = useAppSelector((state) => state.users);
 
-  const {data: users} = usersData
+  const { data: users } = usersData;
 
   useEffect(() => {
     dispatch(user());
@@ -16,6 +16,7 @@ const Welcome = () => {
 
   return (
     <div>
+      <TopHero />
       {users &&
         users.map((user, idx) => {
           return (
