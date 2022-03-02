@@ -7,12 +7,8 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
 const Welcome = () => (
     <Container>
-        <Testimonia>
-            <KeyboardArrowLeftIcon />
-        </Testimonia>
-        <Notify> 
-
-        </Notify>
+        <Testimonia />
+        <Notify /> 
     </Container>
 );
 
