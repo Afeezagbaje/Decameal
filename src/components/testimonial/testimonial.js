@@ -1,50 +1,57 @@
 import image from "../images/img.png";
-import "../notification/notifications.css";
-import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import StarIcon from "@mui/icons-material/Star";
+import { Box, Rating, Typography } from "@mui/material";
 
-const Testimonial = () => (
-  <div className="images">
-    <KeyboardArrowLeftIcon fontSize="large" className="arrow" />
-
-    <div ClassNames="image-div">
-      <center>
-        <img src={image} alt="images" /> <br /> <br />
-        <StarIcon fontSize="0.5" color="primary" />
-        <StarIcon fontSize="0.5" color="primary" />
-        <StarIcon fontSize="0.5" color="primary" />
-        <StarIcon fontSize="0.5" color="primary" />
-        <StarIcon fontSize="0.5" color="primary" />
-        <p className="text">
-          {" "}
-          It is a long established fact that a <br />
-          reader will be distracted by the <br />
-          readable content of a page
-        </p>
-        <h6 className="text2"> Rahim Khan</h6>
-      </center>
-    </div>
-
-    <div ClassNames="image-div">
-      <center>
-        <img src={image} alt="images" /> <br /> <br />
-        <StarIcon fontSize="0.5" color="primary" />
-        <StarIcon fontSize="0.5" color="primary" />
-        <StarIcon fontSize="0.5" color="primary" />
-        <StarIcon fontSize="0.5" color="primary" />
-        <StarIcon fontSize="0.5" color="primary" />
-        <p className="text">
-          {" "}
-          It is a long established fact that a <br />
-          reader will be distracted by the <br />
-          readable content of a page
-        </p>
-        <h6 className="text2"> Rahim Khan</h6>
-      </center>
-    </div>
-    <KeyboardArrowRightIcon fontSize="large" className="arrow" />
-  </div>
+const Testimonial = ({ reviewer }) => (
+  <Box
+    sx={{
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      margin: "1rem 4rem",
+    }}
+  >
+    <center>
+      <img src={image} alt="images" />
+      <Rating
+        name="read-only"
+        value={4.5}
+        readOnly
+        precision={0.5}
+        sx={{
+          color: "#B8D344",
+          marginTop: "3rem",
+        }}
+      />
+      <Typography
+        variant="p"
+        component="p"
+        sx={{
+          color: "#6a6a6a",
+          fontFamily: "Poppins",
+          fontSize: "1rem",
+          lineHeight: "25.6px",
+          maxWidth: "300px",
+          margin: "1rem auto",
+        }}
+      >
+        {" "}
+        It is a long established fact that a reader will be distracted by the
+        readable content of a page
+      </Typography>
+      <Typography
+        variant="h5"
+        component="h5"
+        sx={{
+          fontFamily: "Oleo Script",
+          color: "#1c1c1c",
+          fontweight: "400px",
+        }}
+      >
+        {" "}
+        {reviewer}
+      </Typography>
+    </center>
+  </Box>
 );
 
 export default Testimonial;

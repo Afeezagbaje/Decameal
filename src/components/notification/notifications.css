@@ -22,18 +22,7 @@
   height: 100%;
   width: 100%;
 }
-.text {
-  color: 6a6a6a;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400px;
-  font-size: 16px;
-  line-height: 25.6px;
-}
-.text2 {
-  font-family: "Oleo Script", cursive;
-  color: #1c1c1c;
-  font-weight: 400px;
-}
+
 .notify-main {
   width: 1440px;
   height: 435px;
