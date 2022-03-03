@@ -3,7 +3,6 @@ import Hero from "./Hero/Hero"
 import Meals from "./Meals/Meals"
 import Diet from "./Diet/DietPage"
 import MenuPage from "./menu/MenuPage";
-import "./Landing.css";
 
 const LandingPage = () => {
   return (
