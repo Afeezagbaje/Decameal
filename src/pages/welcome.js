@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { user } from "../store/slices/userSlice";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
+import TestimonialSection from "../components/testimonial/index";
+// import Notification from "../components/notification/notification";
+import Notification from "../components/notification/index";
+import Footer from "../components/footer/Footer";
 import TopHero from "../components/topHero";
 
 const Welcome = () => {
@@ -34,6 +38,9 @@ const Welcome = () => {
         contact/message the kitchen staff and vise-versa, have a weekly meal
         time table and an admin dashboard
       </p>
+      <TestimonialSection />
+      <Notification />
+      <Footer />
     </div>
   );
 };

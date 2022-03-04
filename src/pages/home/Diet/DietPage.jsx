@@ -23,7 +23,6 @@ const DietPage = () => {
         }}
       >
         <DietImage />
-
         <DietContent />
       </Box>
     </Paper>
