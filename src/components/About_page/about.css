@@ -1,0 +1,48 @@
+.We {
+  color: #34a853;
+}
+
+.about-page-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 96px;
+}
+
+.about-page-message {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.button-text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.chef-image {
+  position: absolute;
+  bottom: -0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.chef2-image {
+  position: absolute;
+  bottom: -0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.chef3-image {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.chef4-image {
+  position: absolute;
+  bottom: -0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
