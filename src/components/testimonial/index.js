@@ -2,6 +2,8 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { Box, useMediaQuery } from "@mui/material";
 import Testimonial from "./testimonial";
+import author1 from "../images/author-1.png";
+import author2 from "../images/author-2.png";
 
 const Content = ({ showIcons }) => {
   return (
@@ -9,8 +11,8 @@ const Content = ({ showIcons }) => {
       {showIcons && (
         <KeyboardArrowLeftIcon sx={{ color: "#979797", fontSize: "7rem" }} />
       )}
-      <Testimonial reviewer={"Rahim Khan"} />
-      <Testimonial reviewer={"Usman Shand"} />
+      <Testimonial reviewer={"Rahim Khan"} avatar={author1} />
+      <Testimonial reviewer={"Usman Shand"} avatar={author2} />
       {showIcons && (
         <KeyboardArrowRightIcon
           sx={{ color: "#979797", fontSize: "7rem" }}

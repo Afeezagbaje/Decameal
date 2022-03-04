@@ -1,7 +1,6 @@
-import image from "../images/img.png";
 import { Box, Rating, Typography } from "@mui/material";
 
-const Testimonial = ({ reviewer }) => (
+const Testimonial = ({ reviewer, avatar }) => (
   <Box
     sx={{
       display: "flex",
@@ -11,7 +10,7 @@ const Testimonial = ({ reviewer }) => (
     }}
   >
     <center>
-      <img src={image} alt="images" />
+      <img src={avatar} alt="avatar" />
       <Rating
         name="read-only"
         value={4.5}
