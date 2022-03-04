@@ -3,7 +3,6 @@ import "./about.css";
 import {
   Box,
   Button,
-  TextField,
   Typography,
   Grid,
   Container,
@@ -34,9 +33,9 @@ const AboutPage = () => {
         <Box
           style={{
             paddingTop: 276,
-            paddingLeft: 98,
             color: "#fff",
           }}
+          className="header-content"
         >
           <Box
             className="about-page-title"
@@ -44,22 +43,20 @@ const AboutPage = () => {
               fontFamily: "Poppins",
               fontStyle: "normal",
               fontWeight: "bold",
-              fontSize: 96,
             }}
           >
             <span className="We">We</span> serve you <br /> Healthy meals
           </Box>
           <Box
             style={{
-              width: "730px",
               height: "104px",
               fontFamily: "Poppins",
               fontStyle: "normal",
               fontWeight: 500,
-              fontSize: 24,
               lineHeight: "120%",
               color: "#FFFFFF",
             }}
+            className="about-page-sub-title"
           >
             We promise you will enjoy and find your favorite meals, eat what you
             want and save your precious time
@@ -88,38 +85,37 @@ const AboutPage = () => {
         }}
       >
         <Container>
-          <Grid container spacing={6}>
-            <Grid item xs={6}>
+          <Grid container spacing={8}>
+            <Grid
+              item
+              md={6}
+              xs={12}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <Box
                 style={{
                   height: "270px",
-                  position: "relative",
-                  width: "361px",
+        
                   display: "flex",
-                  alignItems: "flex-end",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
-                <Box
-                  style={{
-                    position: "absolute",
-                    left: "50%",
-                    top: "-50%",
-                    transform: "translate(-50%, 100%)",
-                  }}
-                >
-                  <img src={image} alt="mm" />
-                </Box>
+                <img src={image} alt="mm" />
               </Box>
 
               <Typography
                 style={{
                   color: "rgb(255, 255, 255)",
-                  position: "relative",
-                  display: "flex",
-                  marginLeft: "30px",
-                  top: "80px",
+                  textAlign: "center",
                   fontSize: "25px",
                   fontWeight: "bold",
+                  marginTop: 51,
                 }}
               >
                 service of Qualified chef
@@ -127,44 +123,34 @@ const AboutPage = () => {
             </Grid>
             <Grid
               item
-              xs={6}
+              md={6}
+              xs={12}
               style={{
-                paddingLeft: "215px",
-              }}
-              sm={{
-                paddingLeft: 0,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
               <Box
                 style={{
                   height: "270px",
-                  position: "relative",
-                  width: "361px",
+        
                   display: "flex",
-                  alignItems: "flex-end",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
-                <Box
-                  style={{
-                    position: "absolute",
-                    left: "50%",
-                    top: "-70%",
-                    transform: "translate(-50%, 100%)",
-                  }}
-                >
-                  <img src={picture} alt="mm" />
-                </Box>
+                <img src={picture} alt="mm" />
               </Box>
               <Box>
                 <Typography
                   style={{
                     color: "rgb(255, 255, 255)",
-                    position: "relative",
-                    display: "flex",
-                    marginLeft: "100px",
-                    top: "80px",
+                    textAlign: "center",
                     fontSize: "25px",
                     fontWeight: "bold",
+                    marginTop: 41,
                   }}
                 >
                   Quality service
@@ -177,11 +163,10 @@ const AboutPage = () => {
         <Typography
           style={{
             color: "rgb(255, 255, 255)",
-            position: "relative",
-            left: "416px",
+            textAlign: "center",
             fontSize: "340%",
-            top: "150px",
             fontWeight: "bold",
+            maxWidth: "100%",
           }}
         >
           Meet our Chefs
@@ -189,21 +174,22 @@ const AboutPage = () => {
         <Container>
           <Grid
             container
-            spacing={6}
+            spacing={8}
             style={{
-              marginTop: "25em",
+              marginTop: "200px",
             }}
           >
-            <Grid item xs={6}>
+            <Grid item md={6} xs={12} className="chef-item-grid">
               <Box
                 style={{
                   backgroundColor: "#fff",
                   height: "290px",
                   position: "relative",
-                  width: "361px",
+        
                   display: "flex",
                   alignItems: "flex-end",
                 }}
+                className="chef-card"
               >
                 <Box
                   style={{
@@ -241,9 +227,12 @@ const AboutPage = () => {
             </Grid>
             <Grid
               item
-              xs={6}
+              md={6}
+              xs={12}
+              className="chef-item-grid"
               style={{
-                paddingLeft: "215px",
+                display: "flex",
+                justifyContent: "flex-end",
               }}
             >
               <Box
@@ -251,10 +240,11 @@ const AboutPage = () => {
                   backgroundColor: "#fff",
                   height: "287px",
                   position: "relative",
-                  width: "361px",
+        
                   display: "flex",
                   alignItems: "flex-end",
                 }}
+                className="chef-card"
               >
                 <Box
                   style={{
@@ -299,16 +289,17 @@ const AboutPage = () => {
               marginTop: "20em",
             }}
           >
-            <Grid item xs={6}>
+            <Grid item md={6} xs={12} className="chef-item-grid">
               <Box
                 style={{
                   backgroundColor: "#fff",
                   height: "280px",
                   position: "relative",
-                  width: "361px",
+        
                   display: "flex",
                   alignItems: "flex-end",
                 }}
+                className="chef-card"
               >
                 <Box
                   style={{
@@ -346,9 +337,12 @@ const AboutPage = () => {
             </Grid>
             <Grid
               item
-              xs={6}
+              md={6}
+              xs={12}
+              className="chef-item-grid"
               style={{
-                paddingLeft: "215px",
+                display: "flex",
+                justifyContent: "flex-end",
               }}
             >
               <Box
@@ -356,10 +350,11 @@ const AboutPage = () => {
                   backgroundColor: "#fff",
                   height: "280px",
                   position: "relative",
-                  width: "361px",
+        
                   display: "flex",
                   alignItems: "flex-end",
                 }}
+                className="chef-card"
               >
                 <Box
                   style={{
