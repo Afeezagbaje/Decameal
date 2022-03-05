@@ -1,0 +1,17 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+.text {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42.19px;
+}
+@media screen and (max-width: 600px) {
+    .text {
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 42.19px;
+    }
+}
+

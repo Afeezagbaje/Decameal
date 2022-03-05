@@ -6,6 +6,7 @@ import TestimonialSection from "../components/testimonial/index";
 import Notification from "../components/notification/index";
 import Footer from "../components/footer/Footer";
 import TopHero from "../components/topHero";
+import Nav from "../component/nav/Nav";
 
 const Welcome = () => {
   const dispatch = useAppDispatch();
@@ -20,6 +21,7 @@ const Welcome = () => {
 
   return (
     <div>
+      <Nav />
       <TopHero />
       {users &&
         users.map((user, idx) => {
