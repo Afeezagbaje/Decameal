@@ -1,19 +1,15 @@
-import React from "react";
 import "./about.css";
-import {
-  Box,
-  Button,
-  Typography,
-  Grid,
-  Container,
-} from "@mui/material";
-import picture from "../../assets/knife.png";
-import image from "../../assets/humanlike.png";
+
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
+
+import React from "react";
 import bannerImage from "../../assets/about.png";
 import chef1 from "../../assets/chef1woman.png";
 import chef2 from "../../assets/firstman.png";
 import chef3 from "../../assets/chef2woman.png";
 import chef4 from "../../assets/secondman.png";
+import image from "../../assets/humanlike.png";
+import picture from "../../assets/knife.png";
 
 const AboutPage = () => {
   return (
@@ -22,7 +18,7 @@ const AboutPage = () => {
         md={{
           height: 912,
         }}
-        style={{
+        sx={{
           backgroundImage: `url(${bannerImage})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -47,17 +43,7 @@ const AboutPage = () => {
           >
             <span className="We">We</span> serve you <br /> Healthy meals
           </Box>
-          <Box
-            style={{
-              height: "104px",
-              fontFamily: "Poppins",
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "120%",
-              color: "#FFFFFF",
-            }}
-            className="about-page-sub-title"
-          >
+          <Box className="about-page-sub-title">
             We promise you will enjoy and find your favorite meals, eat what you
             want and save your precious time
           </Box>
@@ -72,10 +58,12 @@ const AboutPage = () => {
               marginTop: "25px",
               borderRadius: "7px",
               marginBottom: "238px",
+              fontFamily: "Poppins",
+              fontStyle: "normal",
+              fontWeight: "bold",
             }}
-            className="submit_button"
           >
-            <span className="button-text">Explore Meals</span>
+            Explore Meals
           </Button>
         </Box>
       </Box>
@@ -100,7 +88,7 @@ const AboutPage = () => {
               <Box
                 style={{
                   height: "270px",
-        
+
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -135,7 +123,7 @@ const AboutPage = () => {
               <Box
                 style={{
                   height: "270px",
-        
+
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -185,9 +173,12 @@ const AboutPage = () => {
                   backgroundColor: "#fff",
                   height: "290px",
                   position: "relative",
-        
+
                   display: "flex",
-                  alignItems: "flex-end",
+                  flexDirection: "column",
+                  justifyContent: "flex-end",
+
+                  // alignItems: "flex-end",
                 }}
                 className="chef-card"
               >
@@ -205,22 +196,23 @@ const AboutPage = () => {
                   <img src={chef1} alt="mm" className="chef-image" />
                 </Box>
                 <Box>
-                  <Typography>
-                    <p
-                      style={{
-                        position: "relative",
-                        marginLeft: "22px",
-                        marginRight: "20px",
-                        width: "100%",
-                        fontSize: "15px",
-                        paddingBottom: "42px",
-                      }}
-                    >
-                      Sarah Johnson
-                      <br /> Sarah is a great cook.
-                      <br /> she is able to prepare every meal to its
-                      <br /> rhythme
-                    </p>
+                  <Typography
+                    variant="subtitle1"
+                    gutterBottom
+                    component="div"
+                    sx={{
+                      position: "relative",
+                      margin: "0 auto",
+                      width: "100%",
+                      fontSize: "15px",
+                      paddingBottom: "42px",
+                      textAlign: "center",
+                    }}
+                  >
+                    Sarah Johnson
+                    <br /> Sarah is a great cook.
+                    <br /> she is able to prepare every meal to its
+                    <br /> rhythme
                   </Typography>
                 </Box>
               </Box>
@@ -240,7 +232,7 @@ const AboutPage = () => {
                   backgroundColor: "#fff",
                   height: "287px",
                   position: "relative",
-        
+
                   display: "flex",
                   alignItems: "flex-end",
                 }}
@@ -295,7 +287,7 @@ const AboutPage = () => {
                   backgroundColor: "#fff",
                   height: "280px",
                   position: "relative",
-        
+
                   display: "flex",
                   alignItems: "flex-end",
                 }}
@@ -350,7 +342,7 @@ const AboutPage = () => {
                   backgroundColor: "#fff",
                   height: "280px",
                   position: "relative",
-        
+
                   display: "flex",
                   alignItems: "flex-end",
                 }}

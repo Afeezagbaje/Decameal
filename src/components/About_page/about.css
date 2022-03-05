@@ -12,6 +12,12 @@
 .about-page-sub-title {
     font-size: 24px;
     width: 730px;
+    height: "104px";
+    font-family: "Poppins";
+    font-style: "normal";
+    font-weight: 500;
+    line-height: "120%";
+    color: "#FFFFFF";
 }
 
 .about-page-message {
