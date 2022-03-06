@@ -1,3 +1,14 @@
+.hero:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #34a853;
+  opacity: 0.13;
+}
+
 .We {
   color: #34a853;
 }
@@ -33,9 +44,14 @@
   font-weight: bold;
 }
 
+.picture {
+  width: 100%;
+  height: auto;
+}
+
 .chef-image {
   position: absolute;
-  bottom: -0%;
+  bottom: 17%;
   left: 50%;
   transform: translate(-50%, 0%);
 }
@@ -44,6 +60,8 @@
   bottom: -0%;
   left: 50%;
   transform: translate(-50%, 0%);
+  width: 70%;
+
 }
 .chef3-image {
   position: absolute;
@@ -53,7 +71,7 @@
 }
 .chef4-image {
   position: absolute;
-  bottom: -0%;
+  bottom: 17%;
   left: 50%;
   transform: translate(-50%, 0%);
 }

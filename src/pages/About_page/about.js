@@ -8,8 +8,8 @@ import chef1 from "../../assets/chef1woman.png";
 import chef2 from "../../assets/firstman.png";
 import chef3 from "../../assets/chef2woman.png";
 import chef4 from "../../assets/secondman.png";
-import image from "../../assets/humanlike.png";
-import picture from "../../assets/knife.png";
+import humanlike from "../../assets/humanlike.png";
+import knife from "../../assets/knife.png";
 
 const AboutPage = () => {
   return (
@@ -25,6 +25,7 @@ const AboutPage = () => {
           backgroundColor: "rgba(52, 168, 83, 0.21)",
           backgroundPosition: "center",
         }}
+        className="hero"
       >
         <Box
           style={{
@@ -94,7 +95,7 @@ const AboutPage = () => {
                   justifyContent: "center",
                 }}
               >
-                <img src={image} alt="mm" />
+                <img src={humanlike} alt="mm" className="picture" />
               </Box>
 
               <Typography
@@ -129,7 +130,7 @@ const AboutPage = () => {
                   justifyContent: "center",
                 }}
               >
-                <img src={picture} alt="mm" />
+                <img src={knife} alt="mm" className="chef-like-image picture" />
               </Box>
               <Box>
                 <Typography
@@ -193,7 +194,7 @@ const AboutPage = () => {
                     transform: "translate(-50%, 100%)",
                   }}
                 >
-                  <img src={chef1} alt="mm" className="chef-image" />
+                  <img src={chef1} alt="mm" className="chef-image picture" />
                 </Box>
                 <Box>
                   <Typography
@@ -221,7 +222,7 @@ const AboutPage = () => {
               item
               md={6}
               xs={12}
-              className="chef-item-grid"
+              className="chef-item-grid picture"
               style={{
                 display: "flex",
                 justifyContent: "flex-end",
@@ -234,7 +235,8 @@ const AboutPage = () => {
                   position: "relative",
 
                   display: "flex",
-                  alignItems: "flex-end",
+                  flexDirection: "column",
+                  justifyContent: "flex-end",
                 }}
                 className="chef-card"
               >
@@ -255,11 +257,11 @@ const AboutPage = () => {
                   <Typography
                     style={{
                       position: "relative",
-                      marginLeft: "22px",
-                      marginRight: "20px",
+                      margin: "0 auto",
                       width: "100%",
                       fontSize: "15px",
                       paddingBottom: "42px",
+                      textAlign: "center",
                     }}
                   >
                     Mike Law
@@ -289,7 +291,8 @@ const AboutPage = () => {
                   position: "relative",
 
                   display: "flex",
-                  alignItems: "flex-end",
+                  flexDirection: "column",
+                  justifyContent: "flex-end",
                 }}
                 className="chef-card"
               >
@@ -304,18 +307,17 @@ const AboutPage = () => {
                     transform: "translate(-50%, 100%)",
                   }}
                 >
-                  <img src={chef4} alt="mm" className="chef3-image" />
+                  <img src={chef4} alt="mm" className="chef3-image picture" />
                 </Box>
                 <Box>
                   <Typography
                     style={{
                       position: "relative",
-                      marginLeft: "22px",
-                      marginRight: "20px",
+                      margin: "0 auto",
                       width: "100%",
                       fontSize: "15px",
-                      top: "15px",
-                      paddingBottom: "44px",
+                      paddingBottom: "35px",
+                      textAlign: "center",
                     }}
                   >
                     Brad Hakimi
@@ -344,7 +346,8 @@ const AboutPage = () => {
                   position: "relative",
 
                   display: "flex",
-                  alignItems: "flex-end",
+                  flexDirection: "column",
+                  justifyContent: "flex-end",
                 }}
                 className="chef-card"
               >
@@ -359,18 +362,17 @@ const AboutPage = () => {
                     transform: "translate(-50%, 100%)",
                   }}
                 >
-                  <img src={chef3} alt="mm" className="chef4-image" />
+                  <img src={chef3} alt="mm" className="chef4-image picture" />
                 </Box>
                 <Box>
                   <Typography
                     style={{
                       position: "relative",
-                      marginLeft: "15px",
-                      marginRight: "18px",
+                      margin: "0 auto",
                       width: "100%",
                       fontSize: "15px",
-                      top: "15px",
-                      paddingBottom: "44px",
+                      paddingBottom: "35px",
+                      textAlign: "center",
                     }}
                   >
                     Fiona Ghalarger

@@ -3,7 +3,7 @@ import Login from "../pages/login/login";
 import ForgotPassword from "../pages/forgotPassword/forgotPassword";
 import Home from "../pages/home/LandingPage";
 import Reset from "../pages/resetPassword/ResetPassword";
-import AboutPage from "../components/About_page/about";
+import AboutPage from "../pages/About_page/about";
 
 const App = () => (
   <Routes>
