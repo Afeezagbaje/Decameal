@@ -11,7 +11,7 @@ import Onion from "../../../assets/img/onionsalad.png";
 import WeirdFood from "../../../assets/img/weirdfood.png"
 const MenuCards = () => {
   return (
-    <Container maxWidth="xl">
+    <Container>
       <Grid container spacing={4}>
       <Grid item xs={12} sm={6} md={3}>
       <Cards

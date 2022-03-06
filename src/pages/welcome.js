@@ -6,7 +6,7 @@ import TestimonialSection from "../components/testimonial/index";
 import Notification from "../components/notification/index";
 import Footer from "../components/footer/Footer";
 import TopHero from "../components/topHero";
-import Nav from "../component/nav/Nav";
+import Nav from "../components/nav/Nav";
 
 const Welcome = () => {
   const dispatch = useAppDispatch();

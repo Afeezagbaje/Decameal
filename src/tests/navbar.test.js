@@ -2,10 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { render, cleanup, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import Nav from "../component/nav/Nav";
-import NavElement from "../component/navElement/NavElement";
-import Logo from "../component/logo/Logo";
-import { BrowserRouter } from "react-router-dom";
+import NavElement from "../components/navElement/NavElement";
+import Logo from "../components/logo/Logo";
 
 describe("NavElement", () => {
   afterEach(cleanup);

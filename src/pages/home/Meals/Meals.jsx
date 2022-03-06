@@ -7,6 +7,7 @@ import Afang from "../../../assets/img/Afang.png";
 import ExploreButton from "./ExploreButton";
 const Meals = () => {
   return (
+
     <Paper
       elevation={0}
       square
@@ -25,7 +26,7 @@ const Meals = () => {
       >
         Meals for your satisfaction
       </Typography>
-      <Container maxWidth="xl">
+      <Container>
         <Grid container spacing={12}>
           <Grid item xs={12} sm={6} md={4}>
             <Cards
