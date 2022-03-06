@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react'
 import { Box, Button } from "@mui/material";
-import "./Landing.css";
-
-const LandingPage = () => {
+import "./Hero.css"
+const Hero = () => {
   return (
     <Box className="landing-page">
       <Box className="landing-page-content">
@@ -24,7 +23,7 @@ const LandingPage = () => {
         </Button>
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default LandingPage;
+export default Hero;
