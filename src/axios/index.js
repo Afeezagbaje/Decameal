@@ -4,9 +4,9 @@ import { getSavedUserToken } from "../utils";
 const token = getSavedUserToken() ? getSavedUserToken() : "";
 
 const axios = Axios.create({
-  //   baseURL: "https://decameal.herokuapp.com/api/v1/",
+    baseURL: "https://decameal.herokuapp.com/api/v1/",
   // baseURL: process.env.REACT_APP_BASE_URL
-  baseURL: "https://jsonplaceholder.typicode.com",
+  // baseURL: "https://jsonplaceholder.typicode.com/login",
   headers: {
     Accept: "application/json",
     Authorization: "Token " + token,
