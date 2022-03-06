@@ -1,16 +1,18 @@
 import React from "react";
-import Hero from "./Hero/Hero"
-import Meals from "./Meals/Meals"
-import Diet from "./Diet/DietPage"
+import Meals from "./Meals/Meals";
+import Diet from "./Diet/DietPage";
 import MenuPage from "./menu/MenuPage";
-import TestimonialSection from "../../components/testimonial"
+import TestimonialSection from "../../components/testimonial";
 import Notification from "../../components/notification";
 import Footer from "../../components/footer/Footer";
+import Nav from "../../components/nav/Nav";
+import TopHero from "../../components/topHero";
 
 const LandingPage = () => {
   return (
     <>
-      <Hero />
+      <Nav />
+      <TopHero />
       <Meals />
       <Diet />
       <MenuPage />
