@@ -26,7 +26,7 @@ function TopHero({ buttonText, Text1, Text2, Text3, Text4 }) {
             <Box className="food">
               <Box style={{ marginTop: "0" }}>
                 <span className="eat">{Text1 ? Text1 : "Eat"}</span>{" "}
-                {Text2 ? Text2 : "Healthy"}
+                {Text2 ? Text2 : "healthy"}
                 <Box>{Text3 ? Text3 : "Natural Food"}</Box>
               </Box>
             </Box>
@@ -41,7 +41,7 @@ function TopHero({ buttonText, Text1, Text2, Text3, Text4 }) {
             </Box>
             <Box sx={{ marginBottom: "3rem" }}>
               <ColorButton onClick={() => alert("")}>
-                {buttonText ? buttonText : "Get Started"}
+                {buttonText ? buttonText : "Explore Meals"}
               </ColorButton>
             </Box>
           </Container>
