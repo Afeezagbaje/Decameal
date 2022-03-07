@@ -4,14 +4,15 @@ footer {
   background-color: #0b0d17;
   color: #eeeff4;
 }
-.footer-container{
+.footer-container {
   margin-left: 11rem;
-}
-.download{
-  margin-left: -6rem;
 }
 hr {
   height: 1px;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 20.36%;
   background: #000;
   opacity: 0.2;
 }
@@ -26,6 +27,10 @@ hr {
 @media screen and (max-width: 768px) {
   .footer-list {
     flex-wrap: wrap;
+    align-content: center;
+  }
+  .footer-container {
+    margin-left: 1rem;
   }
 }
 .footer-socials {
@@ -61,8 +66,12 @@ hr {
 }
 img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 50%;
   padding-bottom: 10px;
+}
+@media screen and (max-width: 899px) {
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
