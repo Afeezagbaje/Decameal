@@ -18,3 +18,10 @@
     background-color: #fff !important;
     color: #1c1c1c !important;
 }
+
+.dropdown-text {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}

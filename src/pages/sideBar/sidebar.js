@@ -96,7 +96,7 @@ const Sidebar = () => {
           }}
         >
           <a
-          href="/#"
+          href="#"
           onClick={() => setShowdropdown(!showdropdown)}
             style={{
               display: "flex",
@@ -111,7 +111,7 @@ const Sidebar = () => {
             }}
           >
             <Message sx={{ width: "15%" }} />
-            <Typography>Messages</Typography>
+            <Typography className="dropdown-text">Messages <span className={showdropdown ? "turn-caret": ""}>&gt;</span></Typography>
           </a>
         </Box>
             {
