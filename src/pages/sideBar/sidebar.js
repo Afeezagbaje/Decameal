@@ -95,9 +95,11 @@ const Sidebar = () => {
             width: "267px",
           }}
         >
-          <a
-          href="#"
-          onClick={() => setShowdropdown(!showdropdown)}
+          <NavLink
+            to="/"
+            onClick={(e) => {
+              e.preventDefault();
+              setShowdropdown(!showdropdown)}}
             style={{
               display: "flex",
               width: "100%",
@@ -111,89 +113,88 @@ const Sidebar = () => {
             }}
           >
             <Message sx={{ width: "15%" }} />
-            <Typography className="dropdown-text">Messages <span className={showdropdown ? "turn-caret": ""}>&gt;</span></Typography>
-          </a>
-        </Box>
-            {
-              showdropdown ? (
-                <>
-                <Box
-          className="dropdown"
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            textAlign: "center",
-          }}
-        >
-          <NavLink
-            to="/"
-            style={{
-              display: "flex",
-              width: "100%",
-              textDecoration: "none",
-              color: "#FFFFFF",
-              gap: "0.5em",
-              padding: ".5em",
-              borderRadius: "10px",
-            }}
-          >
-           
-            <Typography>Inbox</Typography>
+            <Typography className="dropdown-text">
+              Messages{" "}
+              <span className={showdropdown ? "turn-caret" : ""}>&gt;</span>
+            </Typography>
           </NavLink>
         </Box>
-        <Box
-          className="dropdown"
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            textAlign: "center",
-          }}
-        >
-          <NavLink
-            to="/"
-            style={{
-              display: "flex",
-              width: "100%",
-              textDecoration: "none",
-              color: "#FFFFFF",
-              gap: "0.5em",
-              padding: ".5em",
-              borderRadius: "10px",
-            }}
-          >
-            
-            <Typography>Outbox</Typography>
-          </NavLink>
-        </Box>
-        <Box
-          className="dropdown"
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            textAlign: "center",
-          }}
-        >
-         <NavLink
-            to="/"
-            style={{
-              display: "flex",
-              width: "100%",
-              textDecoration: "none",
-              color: "#FFFFFF",
-              gap: "0.5em",
-              padding: ".5em",
-              borderRadius: "10px",
-            }}
-          >
-            
-            <Typography>Compose</Typography>
-          </NavLink>
-        </Box>
-                </>
-              ) : ""
-            }
-        
-        
+        {showdropdown ? (
+          <>
+            <Box
+              className="dropdown"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+            >
+              <NavLink
+                to="/"
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  textDecoration: "none",
+                  color: "#FFFFFF",
+                  gap: "0.5em",
+                  padding: ".5em",
+                  borderRadius: "10px",
+                }}
+              >
+                <Typography>Inbox</Typography>
+              </NavLink>
+            </Box>
+            <Box
+              className="dropdown"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+            >
+              <NavLink
+                to="/"
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  textDecoration: "none",
+                  color: "#FFFFFF",
+                  gap: "0.5em",
+                  padding: ".5em",
+                  borderRadius: "10px",
+                }}
+              >
+                <Typography>Outbox</Typography>
+              </NavLink>
+            </Box>
+            <Box
+              className="dropdown"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+            >
+              <NavLink
+                to="/"
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  textDecoration: "none",
+                  color: "#FFFFFF",
+                  gap: "0.5em",
+                  padding: ".5em",
+                  borderRadius: "10px",
+                }}
+              >
+                <Typography>Compose</Typography>
+              </NavLink>
+            </Box>
+          </>
+        ) : (
+          ""
+        )}
+
         <Box
           className="messages"
           sx={{
