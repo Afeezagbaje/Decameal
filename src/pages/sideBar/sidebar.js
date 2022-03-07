@@ -11,9 +11,9 @@ import {
 } from "@mui/icons-material";
 
 const Sidebar = () => {
+  const [showdropdown, setShowdropdown] = React.useState(false);
   return (
     <Box className="side-bar">
-      
       <Box className="top-side-bar">
         <Typography
           variant="h1"
@@ -25,7 +25,8 @@ const Sidebar = () => {
             marginTop: "35.24px",
           }}
         >
-          DecaMea<SpoonLogo />
+          DecaMea
+          <SpoonLogo />
         </Typography>
       </Box>
 
@@ -50,7 +51,7 @@ const Sidebar = () => {
               color: "#FFFFFF",
               gap: "0.5em",
               padding: ".5em",
-              borderRadius: "10px"
+              borderRadius: "10px",
             }}
           >
             <Home sx={{ width: "15%" }} />
@@ -67,7 +68,7 @@ const Sidebar = () => {
           }}
         >
           <NavLink
-            to="/"
+            to="/profile"
             style={{
               display: "flex",
               width: "100%",
@@ -77,7 +78,7 @@ const Sidebar = () => {
               color: "#FFFFFF",
               gap: "0.5em",
               padding: ".5em",
-              borderRadius: "10px"
+              borderRadius: "10px",
             }}
           >
             <AccountCircle sx={{ width: "15%" }} />
@@ -91,10 +92,12 @@ const Sidebar = () => {
             display: "flex",
             alignItems: "center",
             textAlign: "center",
+            width: "267px",
           }}
         >
-          <NavLink
-            to="/"
+          <a
+          href="/#"
+          onClick={() => setShowdropdown(!showdropdown)}
             style={{
               display: "flex",
               width: "100%",
@@ -104,16 +107,95 @@ const Sidebar = () => {
               color: "#FFFFFF",
               gap: "0.5em",
               padding: ".5em",
-              borderRadius: "10px"
+              borderRadius: "10px",
             }}
           >
             <Message sx={{ width: "15%" }} />
             <Typography>Messages</Typography>
+          </a>
+        </Box>
+            {
+              showdropdown ? (
+                <>
+                <Box
+          className="dropdown"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          <NavLink
+            to="/"
+            style={{
+              display: "flex",
+              width: "100%",
+              textDecoration: "none",
+              color: "#FFFFFF",
+              gap: "0.5em",
+              padding: ".5em",
+              borderRadius: "10px",
+            }}
+          >
+           
+            <Typography>Inbox</Typography>
           </NavLink>
         </Box>
-
         <Box
-          className="tickets"
+          className="dropdown"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          <NavLink
+            to="/"
+            style={{
+              display: "flex",
+              width: "100%",
+              textDecoration: "none",
+              color: "#FFFFFF",
+              gap: "0.5em",
+              padding: ".5em",
+              borderRadius: "10px",
+            }}
+          >
+            
+            <Typography>Outbox</Typography>
+          </NavLink>
+        </Box>
+        <Box
+          className="dropdown"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+         <NavLink
+            to="/"
+            style={{
+              display: "flex",
+              width: "100%",
+              textDecoration: "none",
+              color: "#FFFFFF",
+              gap: "0.5em",
+              padding: ".5em",
+              borderRadius: "10px",
+            }}
+          >
+            
+            <Typography>Compose</Typography>
+          </NavLink>
+        </Box>
+                </>
+              ) : ""
+            }
+        
+        
+        <Box
+          className="messages"
           sx={{
             display: "flex",
             alignItems: "center",
@@ -131,7 +213,7 @@ const Sidebar = () => {
               color: "#FFFFFF",
               gap: "0.5em",
               padding: ".5em",
-              borderRadius: "10px"
+              borderRadius: "10px",
             }}
           >
             <RoomService sx={{ width: "15%" }} />
@@ -158,7 +240,7 @@ const Sidebar = () => {
               color: "#FFFFFF",
               gap: "0.5em",
               padding: ".6em .5em",
-              borderRadius: "10px"
+              borderRadius: "10px",
             }}
           >
             <ConfirmationNumber sx={{ width: "15%" }} />

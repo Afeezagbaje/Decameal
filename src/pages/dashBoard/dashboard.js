@@ -1,27 +1,20 @@
 import { Box } from "@mui/system";
 import React from "react";
-import Content from "./content";
 import "../sideBar/sidebar.css";
 import Sidebar from "../sideBar/sidebar";
 
-
 const Dashboard = () => {
   return (
-    <Box
-      style={{
-        display: "flex",
-        padding: "1em"
-      }}
-    >
-      <Sidebar />
+    <div style={{ backgroundColor: "#8EA739" }}>
       <Box
         style={{
-          width: "calc(100% - 320px)",
+          display: "flex",
+          padding: "1em",
         }}
       >
-        <Content />
+        <Sidebar />
       </Box>
-    </Box>
+    </div>
   );
 };
 
