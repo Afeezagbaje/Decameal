@@ -56,10 +56,6 @@ img{
     }
 }
 
-
-
-
-
 .notify-sub{
     padding-left: 60px;
     padding-top: 80px;
@@ -86,14 +82,12 @@ img{
     }
     
 }
-
 .notify-sub > small{
     color: white;
     font-size: 18px;
     font-family: Poppins;
     line-height: 33px;
 }
-
 @media screen and (max-width: 412px) and (min-width: 300px){
     .notify-sub > small{
         font-size: 12px;
@@ -161,7 +155,16 @@ section{
     display: flex;
     background-color: #8EA739;
     box-sizing: border-box;
-    
+}
+@media screen and (max-width: 412px) and (min-width: 300px){
+    section{
+        max-width: 412px;
+        padding: 0px;
+        height: 100%;
+        display: block;
+        background-color: #8EA739;
+        box-sizing: border-box;
+    }
 }
 aside{
     width: 320px;
@@ -171,34 +174,65 @@ aside{
     box-sizing: border-box;
     border-radius: 10px;
 }
+@media screen and (max-width: 412px) and (min-width: 300px){
+    aside{
+        display: none;
+    }
+}
 .main{
     margin-right: 70px;
     margin-left: 59px;
+}
+@media screen and (max-width: 412px) and (min-width: 300px){
+    .main{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
 }
 .main_two{
     display: flex;
     margin-bottom: 42px;
 }
+@media screen and (max-width: 412px) and (min-width: 300px){
+    .main_two{
+        display: block;
+        margin-bottom: 42px;
+    }
+}
 .main_two_first{
     width: 716px;
     height: 442px;
-    /* background-color: cyan; */
     border-radius: 5px;
+}
+@media screen and (max-width: 412px) and (min-width: 300px){
+    .main_two_first{
+        max-width: 412px;
+        border-radius: 5px;
+    }
 }
 .main_two_second{
     width: 246px;
     height: 441px;
     margin-left: 29px;
-    /* background-color: darkblue; */
     border-radius: 5px;
     box-sizing: border-box;
 }
-/* .sub{
-    box-sizing: border-box;
-} */
-.main_three{
-  
+@media screen and (max-width: 412px) and (min-width: 300px){
+    .main_two_second{
+        width: 246px;
+        height: 441px;
+        margin-left: 20%;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+}
+.main_three{ 
     display: flex;
+}
+@media screen and (max-width: 412px) and (min-width: 300px){
+    .main_three{
+        display: block;
+    }
 }
 .section_three{
     width: 992px;
@@ -207,6 +241,15 @@ aside{
     border-radius: 5px;
     padding-left: 50px;
     box-sizing: border-box;
+}
+@media screen and (max-width: 412px) and (min-width: 300px){
+    .section_three{
+        max-width: 412px;
+        height: 1010px;
+        padding-bottom: 15px;
+        text-align: justify;
+        /* background-color: red; */
+    }
 }
 #outlined-basic{
     background-color: white;
@@ -218,6 +261,13 @@ aside{
     margin-bottom: 57px;
     color: white;
     justify-content: space-between;
+}
+@media screen and (max-width: 412px) and (min-width: 300px){
+    .main_one_text{
+        display: block;
+        /* margin-bottom: 220px; */
+
+    }
 }
 .main_one_text > div > span {
     margin-left: 770px;
@@ -251,6 +301,17 @@ aside{
     padding-right: 40px;
     display: flex;
 }
+@media screen and (max-width: 412px) and (min-width: 300px){
+    .third{
+        /* background-color: red; */
+        font-size: 10px;
+        padding: 10px;
+        height: 140px;
+        /* display: block; */
+        /* height: 100%; */
+        /* padding: 0px; */
+    }
+}
 
 .third_third_first{
     /* background-color: yellow; */
@@ -264,34 +325,30 @@ aside{
 .third_third_second{
     height: 100%;
     width: 200px;
-    /* background-color: violet; */
     padding-top: 40px;
     padding-left: 4%;
-    /* box-sizing: border-box; */
 }
 .third_third_third{
     padding-top: 40px;
-    /* padding-left: 40px; */
     box-sizing: border-box;
-    /* background-color: turquoise; */
     height: 100%;
     width: 250px;
     padding-left: 20px;
     padding-right: 20px;
 }
 .dinner{
-    
     font-size: 20px;
     font-weight: bolder;
 }
-#foods{
+.foods{
     background-color:#8EA739;
     width:150px;
-    height:30px;
+    height:28px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 10px;
 }
+
 .staff_one{
     /* background-color: red; */
     height: 65%;
@@ -303,6 +360,7 @@ aside{
     font-size: 13px;
     padding-left: 20px;
 }
+
 .subscription_first{
     background-color: white;
     height: 28.5%;
@@ -343,6 +401,9 @@ nav{
 .bgcolor_3{
     background-color: turquoise;
 }
+.bgcolor_4{
+    background-color: #079E00;
+}
 .duty{
     padding: 10px;
     font-weight: bolder;
@@ -352,4 +413,10 @@ nav{
     padding-top: 20px;
     box-sizing: border-box;
     font-weight: bolder;
+}
+.arrow2{
+    margin-left: 85px;
+}
+.arrow3{
+    margin-right: 85px;
 }

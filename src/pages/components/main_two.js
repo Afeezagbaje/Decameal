@@ -1,4 +1,6 @@
 import React from "react"
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export default function MainTwo(){
     return (
@@ -6,21 +8,26 @@ export default function MainTwo(){
         <div className="main_two_first">
             <div className="first"> </div>
             <div className="second">
-               <div className="second_second"> Wednesday</div>
+               <div className="second_second"> 
+               < KeyboardArrowLeftIcon fontSize="small" className="arrow3"/>
+
+                Wednesday
+                <KeyboardArrowRightIcon fontSize="small" className="arrow2"/>
+                </div>
             </div>
             <div className="third"> 
                 <div className="third_third_first">
-                    05:00 pm <br/>  <span className="dinner">Dinner</span>
+                    05:00 pm <br/>  <span className="dinner">Lunch</span>
                 </div>
                 <div className="third_third_second"> 
-                        <select id="foods" name="food">
+                        <select className="foods" name="food">
                             <option value="Amala">Amala</option>
                             <option value="saab">Rice</option>
                             <option value="fiat">Fiat</option>
                             <option value="audi">Audi</option>
                         </select>
 
-                        <select id="foods" name="food">
+                        <select className="foods bgcolor_3" name="food">
                             <option value="Amala">Amala</option>
                             <option value="saab">Rice</option>
                             <option value="fiat">Fiat</option>
@@ -37,14 +44,14 @@ export default function MainTwo(){
                     05:00 pm <br/>  <span className="dinner">Dinner</span>
                 </div>
                 <div className="third_third_second"> 
-                        <select id="foods" name="food">
+                        <select className="foods" name="food">
                             <option value="Amala">Amala</option>
                             <option value="saab">Rice</option>
                             <option value="fiat">Fiat</option>
                             <option value="audi">Audi</option>
                         </select>
 
-                        <select id="foods" name="food">
+                        <select className="foods bgcolor_3" name="food">
                             <option value="Amala">Amala</option>
                             <option value="saab">Rice</option>
                             <option value="fiat">Fiat</option>
