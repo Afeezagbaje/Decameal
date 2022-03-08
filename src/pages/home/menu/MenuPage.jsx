@@ -3,6 +3,8 @@ import { Paper, Box } from "@mui/material";
 import MenuContent from "./MenuContent";
 import MenuCards from "./MenuCards";
 import ExploreButton from "../Meals/ExploreButton"
+
+
 const MenuPage = () => {
   return (
     <Paper

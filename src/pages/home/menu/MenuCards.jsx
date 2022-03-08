@@ -1,14 +1,16 @@
-import React from "react";
 import { Container, Grid } from "@mui/material";
+
 import Cards from "../../../components/Cards/Cards";
-import Pasta from "../../../assets/img/pasta.png";
-import FruitSalad from "../../../assets/img/fruit-salad.png";
 import Cereal from "../../../assets/img/cereal.png";
-import Orange from "../../../assets/img/orange.png";
-import Spinach from "../../../assets/img/spinach.png";
-import Samosa from "../../../assets/img/samosa.png";
+import FruitSalad from "../../../assets/img/fruit-salad.png";
 import Onion from "../../../assets/img/onionsalad.png";
+import Orange from "../../../assets/img/orange.png";
+import Pasta from "../../../assets/img/pasta.png";
+import React from "react";
+import Samosa from "../../../assets/img/samosa.png";
+import Spinach from "../../../assets/img/spinach.png";
 import WeirdFood from "../../../assets/img/weirdfood.png"
+
 const MenuCards = () => {
   return (
     <Container>
