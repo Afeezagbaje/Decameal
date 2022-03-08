@@ -1,11 +1,13 @@
-import React from "react";
+import "./Cards.css";
+
+import { Button, CardActionArea, } from "@mui/material";
+
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { Button, CardActionArea } from "@mui/material";
+import React from "react";
 import StarRateIcon from "@mui/icons-material/StarRate";
-import "./Cards.css";
+import Typography from "@mui/material/Typography";
 
 function Cards({ image, title, body }) {
   return (
@@ -36,7 +38,7 @@ function Cards({ image, title, body }) {
               <Typography gutterBottom variant="h5" component="div">
                 <h1 className="food-title">{title}</h1>
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="text.secondary" component="div">
                 <div className="card-food-describe">{body}</div>
 
                 <div className="btn-readmore-align">

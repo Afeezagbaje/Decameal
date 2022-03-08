@@ -1,11 +1,14 @@
+import "../../components/sideBar/sidebar.css";
+
 import { Box } from "@mui/system";
+import Nav from "../../components/nav/Nav";
 import React from "react";
-import "../sideBar/sidebar.css";
-import Sidebar from "../sideBar/sidebar";
+import Sidebar from "../../components/sideBar/sidebar";
 
 const Dashboard = () => {
   return (
     <div style={{ backgroundColor: "#8EA739" }}>
+      <Nav /> 
       <Box
         style={{
           display: "flex",
