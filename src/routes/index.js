@@ -1,11 +1,12 @@
-import { Route, Routes } from 'react-router-dom';
-import Dashboard from '../pages/dashBoard/dashboard';
+import { Route, Routes } from "react-router-dom";
+import Dashboard from "../pages/dashBoard/dashboard";
 import Login from "../pages/login/login";
 import ForgotPassword from "../pages/forgotPassword/forgotPassword";
 import Home from "../pages/home/LandingPage";
 import Reset from "../pages/resetPassword/ResetPassword";
 import AboutPage from "../pages/about/about";
 import SubscriberNotification from "../pages/subscriberNotification";
+import KitchenProfile from "../pages/Kitchen_profile_dashboad/kitchen_profile";
 
 const App = () => (
   <Routes>
@@ -16,6 +17,7 @@ const App = () => (
     <Route path="/dashboard/demo" element={<SubscriberNotification />} />
     <Route path="/reset-password" element={<Reset />} />
     <Route path="/about" element={<AboutPage />} />
+    <Route exact path="/kitchen-profile" element={<KitchenProfile />} />
   </Routes>
 );
 
