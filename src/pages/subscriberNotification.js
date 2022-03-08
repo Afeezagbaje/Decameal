@@ -5,10 +5,11 @@ import React from "react"
 import staff from "./images/staff_1.png"
 import MainOne from "./components/main_one";
 import MainTwo from "./components/main_two";
+import "./notifications.css"
 // import MainThird from "./components/main_third"
 
 
-const Subscribers_notification = () => 
+const SubscriberNotification = () => 
 <>
     <section>
         <aside>
@@ -183,4 +184,4 @@ const Subscribers_notification = () =>
 
 
 
-export default Subscribers_notification;
+export default SubscriberNotification;
