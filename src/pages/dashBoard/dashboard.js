@@ -7,8 +7,6 @@ import Sidebar from "../../components/sideBar/sidebar";
 // import SubscriberNotification from "../../components/dashboard/notification/subscriberNotification";
 // import SubscriberProfile from "../../components/dashboard/profile/subscriberProfile";
 
-
-
 const Dashboard = () => {
   return (
     <div style={{ backgroundColor: "#8EA739" }}>
@@ -17,13 +15,21 @@ const Dashboard = () => {
         style={{
           display: "flex",
           padding: "1em",
-          backgroundColor: "red",
+          // backgroundColor: "purple",
         }}
       >
         <Sidebar />
-        {/* <MainContent /> */}
-        {/* <SubscriberNotification /> */}
-        {/* <SubscriberProfile /> */}
+        <Box
+          style={{
+            width: "72%",
+            marginLeft: "2rem",
+            // backgroundColor: "yellow",
+          }}
+        >
+          {/* <MainContent /> */}
+          {/* <SubscriberNotification /> */}
+          {/* <SubscriberProfile /> */}
+        </Box>
       </Box>
     </div>
   );
