@@ -1,5 +1,7 @@
-import React from "react";
 import { Box, Typography } from "@mui/material";
+
+import React from "react";
+
 const MenuContent = () => {
   return (
     <Box
@@ -12,6 +14,7 @@ const MenuContent = () => {
     >
       <Typography
         variant="h4"
+        component="div"
         sx={{
           textAlign: "center",
           marginBottom: "18px",
@@ -25,6 +28,7 @@ const MenuContent = () => {
       </Typography>
       <Typography
         variant="body2"
+        component="div"
         sx={{
           textAlign: "center",
           marginBottom: "18px",

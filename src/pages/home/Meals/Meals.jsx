@@ -1,10 +1,12 @@
-import React from "react";
-import { Paper, Container, Grid, Typography, Box } from "@mui/material";
-import Cards from "../../../components/cards/Cards";
-import Jollof_image from "../../../assets/img/chicken.png";
-import Egusi from "../../../assets/img/Egusi.png";
+import { Box, Container, Grid, Paper, Typography } from "@mui/material";
+
 import Afang from "../../../assets/img/Afang.png";
+import Cards from "../../../components/Cards/Cards";
+import Egusi from "../../../assets/img/Egusi.png";
 import ExploreButton from "./ExploreButton";
+import Jollof_image from "../../../assets/img/chicken.png";
+import React from "react";
+
 const Meals = () => {
   return (
 
@@ -15,6 +17,7 @@ const Meals = () => {
     >
       <Typography
         variant="h4"
+        component="div"
         sx={{
           textAlign: "center",
           marginBottom: "81px",
