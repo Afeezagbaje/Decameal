@@ -3,23 +3,24 @@ import "./about.css";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 
 import React from "react";
-import bannerImage from "../../assets/about.png";
 import chef1 from "../../assets/chef1woman.png";
 import chef2 from "../../assets/firstman.png";
 import chef3 from "../../assets/chef2woman.png";
 import chef4 from "../../assets/secondman.png";
 import humanlike from "../../assets/humanlike.png";
 import knife from "../../assets/knife.png";
+import Nav from "../../components/nav/Nav"
 
 const AboutPage = () => {
   return (
     <>
+      <Nav />
       <Box
         md={{
           height: 912,
         }}
         sx={{
-          backgroundImage: `url(${bannerImage})`,
+          backgroundImage: `url(${"https://res.cloudinary.com/afeezagbaje/image/upload/v1646698115/DevBlogs/decameal_hero_image_r6pi2z.svg"})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundColor: "rgba(52, 168, 83, 0.21)",
