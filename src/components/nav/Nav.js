@@ -11,8 +11,8 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-// import Tooltip from '@mui/material/Tooltip';
-// import Avatar from '@mui/material/Avatar';
+
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -28,13 +28,13 @@ const Nav = () => {
   return (
     <AppBar
       sx={{
-        backgroundColor: "rgba(0,0,0,1)",
+        backgroundColor: "#0005",
         border: 0,
         padding: 0,
         margin: 0,
       }}
       elevation={0}
-      position="static"
+      position="fixed"
     >
       <Container>
         <Toolbar disableGutters>
@@ -44,7 +44,7 @@ const Nav = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <Logo />
+            <Logo textColor="white" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -77,11 +77,24 @@ const Nav = () => {
               }}
             >
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">
-                  <NavElement text="Home" />
-                  <NavElement text="Meals" />
-                  <NavElement text="About Us" />
-                  <Button variant="contained">Login</Button>
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="div"
+                  textAlign="center"
+                >
+                  <NavLink to="/" style={{ textDecoration: "none" }}>
+                    <NavElement text="Home" />{" "}
+                  </NavLink>
+                  <NavLink to="/meals" style={{ textDecoration: "none" }}>
+                    <NavElement text="Meals" />{" "}
+                  </NavLink>
+                  <NavLink to="/about" style={{ textDecoration: "none" }}>
+                    <NavElement text="About Us" />{" "}
+                  </NavLink>
+                  <Button variant="contained" href="/login">
+                    Login
+                  </Button>
                 </Typography>
               </MenuItem>
             </Menu>
@@ -98,13 +111,20 @@ const Nav = () => {
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
             <MenuItem onClick={handleCloseNavMenu}>
               <Button sx={{ my: 2, color: "white", display: "flex" }}>
-                <NavElement text="Home" />
-                <NavElement text="Meals" />
-                <NavElement text="About Us" />
+                <NavLink to="/" style={{ textDecoration: "none" }}>
+                  <NavElement text="Home" />{" "}
+                </NavLink>
+                <NavLink to="/meals" style={{ textDecoration: "none" }}>
+                  <NavElement text="Meals" />{" "}
+                </NavLink>
+                <NavLink to="/about" style={{ textDecoration: "none" }}>
+                  <NavElement text="About Us" />{" "}
+                </NavLink>
                 <Button
                   style={{ marginLeft: "20px", width: "142px", height: "53px" }}
                   variant="contained"
                   color="success"
+                  href="/login"
                 >
                   Login
                 </Button>

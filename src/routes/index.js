@@ -8,13 +8,12 @@ import AboutPage from "../pages/About_page/about";
 
 const App = () => (
   <Routes>
-    <Route exact path="/" element={<Home />} />
-    <Route exact path="/login" element={<Login />} />
-    <Route exact path="/forgot-password" element={<ForgotPassword />} />
-    <Route exact path="/dashboard" element={<Dashboard />} />
-    <Route path="/profile" element= { ( <h1>profile</h1> ) } />
-    <Route exact path="/reset-password" element={<Reset />} />
-    <Route exact path="/about" element={<AboutPage />} />
+    <Route path="/" element={<Home />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/forgot-password" element={<ForgotPassword />} />
+    <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="/reset-password" element={<Reset />} />
+    <Route path="/about" element={<AboutPage />} />
   </Routes>
 );
 

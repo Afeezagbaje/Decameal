@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
 import React from "react";
-import "../sideBar/sidebar.css";
-import Sidebar from "../sideBar/sidebar";
+import "../../components/sideBar/sidebar.css";
+import Sidebar from "../../components/sideBar/sidebar";
 
 const Dashboard = () => {
   return (

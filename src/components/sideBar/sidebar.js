@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
-import { ReactComponent as SpoonLogo } from "./spoon.svg";
+import Logo from "../logo/Logo";
 import {
   Home,
   AccountCircle,
   Message,
   RoomService,
   ConfirmationNumber,
+  ArrowForwardIos
 } from "@mui/icons-material";
 
+
 const Sidebar = () => {
-  const [showdropdown, setShowdropdown] = React.useState(false);
+  const [showdropdown, setShowdropdown] = useState(false);
   return (
     <Box className="side-bar">
       <Box className="top-side-bar">
@@ -22,11 +24,11 @@ const Sidebar = () => {
             fontWeight: "900",
             fontSize: "36px",
             color: "#FFFFFF",
-            marginTop: "35.24px",
+            margin: "35.24px 0",
+            borderBottom: "2px solid #8EA739",
           }}
         >
-          DecaMea
-          <SpoonLogo />
+          <Logo logoStyle={{justifyContent: "center"}}/>
         </Typography>
       </Box>
 
@@ -99,7 +101,8 @@ const Sidebar = () => {
             to="/"
             onClick={(e) => {
               e.preventDefault();
-              setShowdropdown(!showdropdown)}}
+              setShowdropdown(!showdropdown);
+            }}
             style={{
               display: "flex",
               width: "100%",
@@ -115,7 +118,7 @@ const Sidebar = () => {
             <Message sx={{ width: "15%" }} />
             <Typography className="dropdown-text">
               Messages{" "}
-              <span className={showdropdown ? "turn-caret" : ""}>&gt;</span>
+              <span className={showdropdown ? "turn-caret" : ""}>{showdropdown ? <ArrowForwardIos sx={{ width: "50%", transform: "rotate(90deg)" }} /> : <ArrowForwardIos sx={{ width: "50%" }} />}</span>
             </Typography>
           </NavLink>
         </Box>
