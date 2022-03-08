@@ -1,8 +1,9 @@
+import { Container } from "@material-ui/core";
+import Subscribers_notification from "./subscribers-notifications"
 import { useEffect } from "react";
 import { user } from "../store/slices/userSlice";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import TestimonialSection from "../components/testimonial/index";
-// import Notification from "../components/notification/notification";
 import Notification from "../components/notification/index";
 import Footer from "../components/footer/Footer";
 import TopHero from "../components/topHero";
@@ -13,6 +14,13 @@ const Welcome = () => {
 
   const usersData = useAppSelector((state) => state.users);
 
+const Welcome = () => (
+    <Container>
+        {/* <Testimonia /> */}
+        {/* <Notify />  */}
+        <Subscribers_notification />
+    </Container>
+);
   const { data: users } = usersData;
 
   useEffect(() => {
