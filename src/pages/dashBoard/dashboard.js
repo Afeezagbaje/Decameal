@@ -5,6 +5,8 @@ import React from "react";
 import Sidebar from "../../components/sideBar/sidebar";
 // import MainContent from "../../components/dashboard/mainContent/mainContent";
 // import SubscriberNotification from "../../components/dashboard/notification/subscriberNotification";
+// import SubscriberProfile from "../../components/dashboard/profile/subscriberProfile";
+
 
 
 const Dashboard = () => {
@@ -21,6 +23,7 @@ const Dashboard = () => {
         <Sidebar />
         {/* <MainContent /> */}
         {/* <SubscriberNotification /> */}
+        {/* <SubscriberProfile /> */}
       </Box>
     </div>
   );
