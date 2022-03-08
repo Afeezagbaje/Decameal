@@ -1,8 +1,8 @@
 import {
   Box,
-  Typography,
   Button,
   TextField,
+  Typography,
   useMediaQuery,
 } from "@mui/material";
 
@@ -65,7 +65,6 @@ const Notification = () => {
         <TextField
           fullWidth
           variant="outlined"
-          backgroundColor="white"
           type="text"
           sx={{
             width: "300px",
