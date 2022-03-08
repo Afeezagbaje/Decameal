@@ -15,7 +15,7 @@ import {
 const Sidebar = () => {
   const [showdropdown, setShowdropdown] = useState(false);
   return (
-    <Box className="side-bar">
+    <Box className="side-bar" >
       <Box className="top-side-bar">
         <Typography
           variant="h1"

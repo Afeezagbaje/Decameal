@@ -32,6 +32,7 @@ const Nav = () => {
         border: 0,
         padding: 0,
         margin: 0,
+        zIndex: 1,
       }}
       elevation={0}
       position="fixed"
