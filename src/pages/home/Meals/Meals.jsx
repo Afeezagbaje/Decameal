@@ -1,6 +1,6 @@
 import React from "react";
 import { Paper, Container, Grid, Typography, Box } from "@mui/material";
-import Cards from "../../../components/cards/Cards";
+import Cards from "../../../components/Cards/Cards";
 import Jollof_image from "../../../assets/img/chicken.png";
 import Egusi from "../../../assets/img/Egusi.png";
 import Afang from "../../../assets/img/Afang.png";

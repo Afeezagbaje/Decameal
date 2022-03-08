@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
-import Cards from "../../../components/cards/Cards";
+import Cards from "../../../components/Cards/Cards";
 import Pasta from "../../../assets/img/pasta.png";
 import FruitSalad from "../../../assets/img/fruit-salad.png";
 import Cereal from "../../../assets/img/cereal.png";
