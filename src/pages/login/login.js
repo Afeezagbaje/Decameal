@@ -5,8 +5,8 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import { login, loginSuccess } from "../../store/slices/authSlice";
+import { useAppSelector } from "../../store/hooks";
+import { loginSuccess } from "../../store/slices/authSlice";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -34,8 +34,6 @@ const Login = () => {
     }
   };
 
-  const dispatch = useAppDispatch();
-
   const handleCredentialChange = (e) => {
     setLoginCredentials((prevState) => ({
       ...prevState,
@@ -50,12 +48,6 @@ const Login = () => {
       window.location = "/";
     }
   });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    handleLogin();
-    dispatch(login(loginCredentials));
-  };
 
   return (
     <Box className="lg-container">
