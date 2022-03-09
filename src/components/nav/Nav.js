@@ -16,11 +16,6 @@ import HamburgerMenu from "./HamburgerMenu";
 import PropTypes from "prop-types";
 
 const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
   return (
     <AppBar
       sx={{
@@ -62,7 +57,7 @@ const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
-            <MenuItem onClick={handleCloseNavMenu}>
+            <MenuItem>
               <Button sx={{ my: 2, color: "white", display: "flex" }}>
                 <NavLink to="/" style={{ textDecoration: "none" }}>
                   <NavElement text="Home" />{" "}
