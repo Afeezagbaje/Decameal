@@ -1,18 +1,38 @@
 import React from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import { login } from "../../store/slices/authSlice";
+import { login, loginSuccess } from "../../store/slices/authSlice";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [passwordShown, setPasswordShown] = useState(false);
   const [loginCredentials, setLoginCredentials] = useState({
     email: "",
     password: "",
   }); // {email: ol@gmail.com, password: pfsf}
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const loginURL = "http://0.0.0.0:8000/api/v1/auth/login/";
+    try {
+      const reqBody = {
+        email: loginCredentials.email,
+        password: loginCredentials.password,
+      };
+      const response = await axios.post(loginURL, reqBody);
+      console.log(response);
+      localStorage.setItem("decameal_token", response.data.data.token);
+      loginSuccess({ token: response.data.data.token, data: [reqBody] });
+      navigate("/");
+    } catch (e) {
+      console.log(e.response.data);
+    }
+  };
 
   const dispatch = useAppDispatch();
 
@@ -33,6 +53,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    handleLogin();
     dispatch(login(loginCredentials));
   };
 
@@ -50,7 +71,7 @@ const Login = () => {
           Welcome!
         </Typography>
         <Box className="form_container">
-          <form className="login_form" onSubmit={handleSubmit}>
+          <form className="login_form" onSubmit={handleLogin}>
             <Box className="password_container">
               <TextField
                 fullWidth
