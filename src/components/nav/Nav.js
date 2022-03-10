@@ -11,8 +11,11 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-
+import navimage from "../../assets/nav_image.png";
+import navnotification from "../../assets/bell_notify.png";
 import { NavLink } from "react-router-dom";
+import ProfileDropDown from "./Profile_DropDown";
+import NotificationDropDown from "./Notification_icon";
 
 const Nav = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -118,11 +121,37 @@ const Nav = () => {
                 <NavLink to="/meals" style={{ textDecoration: "none" }}>
                   <NavElement text="Meals" />{" "}
                 </NavLink>
-                <NavLink to="/about" style={{ textDecoration: "none" }}>
+                <NavLink
+                  to="/about"
+                  style={{ textDecoration: "none", marginRight: "20px" }}
+                >
                   <NavElement text="About Us" />{" "}
                 </NavLink>
+
+                <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+                  <div className="dropdown">
+                    <img
+                      src={navnotification}
+                      alt="ww"
+                      style={{ marginLeft: "30px", maxWidth: "100%",marginTop:"10px" }}
+                    />
+                    <div className="dropdown-content">
+                      <ProfileDropDown />
+                    </div>
+                  </div>
+                  <div className="dropdown">
+                    <img
+                      src={navimage}
+                      alt="ww"
+                      style={{ marginLeft: "40px", borderRadius: "50%" }}
+                    />
+                    <div className="dropdown-content">
+                      <NotificationDropDown />
+                    </div>
+                  </div>
+                </Box>
                 <Button
-                  style={{ marginLeft: "20px", width: "142px", height: "53px" }}
+                  style={{ marginLeft: "30px", width: "142px", height: "53px" }}
                   variant="contained"
                   color="success"
                   href="/login"

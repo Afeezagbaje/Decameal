@@ -1,27 +1,26 @@
-import React from "react"
+import React from "react";
 // import TextField from "@mui/material/TextField"
 // import ToggleOnIcon from '@mui/icons-material/ToggleOn';
 // import SearchIcon from '@mui/icons-material/Search';
-import staff from "./images/staff_1.png"
+import staff from "./images/staff_1.png";
 import MainOne from "./components/main_one";
 import MainTwo from "./components/main_two";
-import "./notifications.css"
+import "./notifications.css";
+
+
 // import MainThird from "./components/main_third"
 
-
-const SubscriberNotification = () => 
-<>
+const SubscriberNotification = () => (
+  <>
     <section>
-        <aside>
-        </aside>
-        <div className="main">
-            <nav>
-            </nav>
-            <MainOne />
-            <MainTwo />
-            {/* <MainThird /> */}
-            
-            {/* <div className="main_one">
+      <aside></aside>
+      <div className="main">
+        <nav></nav>
+        <MainOne />
+        <MainTwo />
+        {/* <MainThird /> */}
+
+        {/* <div className="main_one">
             <div className="main_one_text">
                 <div> 27-10-2021 <span>Subscription </span></div>
                 <ToggleOnIcon color="string" fontSize="large"/>
@@ -37,7 +36,7 @@ const SubscriberNotification = () =>
             />
             </div>  */}
 
-            {/* <div className="main_two">
+        {/* <div className="main_two">
                 <div className="main_two_first">
                     <div className="first"> </div>
                     <div className="second">
@@ -133,55 +132,66 @@ const SubscriberNotification = () =>
                     
                 </div >
             </div> */}
+        
 
-             
-                <div className="section_three">
-                    <p className="duty"> Staffs on duty</p>
-                    <div className="main_three">
-                        <div className="staff_one"> 
-                        
-                            <div> <img src={staff} alt="pix"/></div>
-                            <div className="main_three_text_1"> 
-                                <br/>
-                                <span>PETRUS ONUKWU</span> <br/> <br/>
-                                <span> Head chef</span> <br/>
-                                <span>  Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque</span>
-                            </div>
-                            
-                        </div>
-
-                        <div className="staff_one"> 
-                        
-                            <div> <img src={staff} alt="pix"/></div>
-                            <div className="main_three_text_1"> 
-                                <br/>
-                                <span>PETRUS ONUKWU</span> <br/> <br/>
-                                <span> Head chef</span> <br/>
-                                <span>  Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque</span>
-                            </div>
-                            
-                        </div>
-
-                        <div className="staff_one"> 
-                        
-                            <div> <img src={staff} alt="pix"/></div>
-                            <div className="main_three_text_1"> 
-                                <br/>
-                                <span>PETRUS ONUKWU</span> <br/> <br/>
-                                <span> Head chef</span> <br/>
-                                <span>  Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque</span>
-                            </div>
-                            
-                        </div>
-                    </div>
+        <div className="section_three">
+          <p className="duty"> Staffs on duty</p>
+          <div className="main_three">
+            <div className="staff_one">
+              <div>
+                {" "}
+                <img src={staff} alt="pix" />
+              </div>
+              <div className="main_three_text_1">
+                <br />
+                <span>PETRUS ONUKWU</span> <br /> <br />
+                <span> Head chef</span> <br />
+                <span>
+                  {" "}
+                  Aenean commodo ligula eget dolor aenean massa. Cum sociis
+                  natoque
+                </span>
+              </div>
             </div>
-            
-           
 
+            <div className="staff_one">
+              <div>
+                {" "}
+                <img src={staff} alt="pix" />
+              </div>
+              <div className="main_three_text_1">
+                <br />
+                <span>PETRUS ONUKWU</span> <br /> <br />
+                <span> Head chef</span> <br />
+                <span>
+                  {" "}
+                  Aenean commodo ligula eget dolor aenean massa. Cum sociis
+                  natoque
+                </span>
+              </div>
+            </div>
+
+            <div className="staff_one">
+              <div>
+                {" "}
+                <img src={staff} alt="pix" />
+              </div>
+              <div className="main_three_text_1">
+                <br />
+                <span>PETRUS ONUKWU</span> <br /> <br />
+                <span> Head chef</span> <br />
+                <span>
+                  {" "}
+                  Aenean commodo ligula eget dolor aenean massa. Cum sociis
+                  natoque
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-</>
-
-
+  </>
+);
 
 export default SubscriberNotification;
