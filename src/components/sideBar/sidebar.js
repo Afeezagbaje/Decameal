@@ -1,21 +1,13 @@
-import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import Logo from "../logo/Logo";
-import {
-  Home,
-  AccountCircle,
-  Message,
-  RoomService,
-  ConfirmationNumber,
-  ArrowForwardIos
-} from "@mui/icons-material";
-
+import { Home, AccountCircle } from "@mui/icons-material";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import "./sidebar.css";
 
 const Sidebar = () => {
-  const [showdropdown, setShowdropdown] = useState(false);
   return (
-    <Box className="side-bar" >
+    <Box className="side-bar">
       <Box className="top-side-bar">
         <Typography
           variant="h1"
@@ -28,7 +20,7 @@ const Sidebar = () => {
             borderBottom: "2px solid #8EA739",
           }}
         >
-          <Logo logoStyle={{justifyContent: "center"}}/>
+          <Logo logoStyle={{ justifyContent: "center" }} />
         </Typography>
       </Box>
 
@@ -70,7 +62,7 @@ const Sidebar = () => {
           }}
         >
           <NavLink
-            to="/profile"
+            to="/dashboard/profile"
             style={{
               display: "flex",
               width: "100%",
@@ -87,117 +79,6 @@ const Sidebar = () => {
             <Typography>Your Profile</Typography>
           </NavLink>
         </Box>
-
-        <Box
-          className="message"
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            textAlign: "center",
-            width: "267px",
-          }}
-        >
-          <NavLink
-            to="/"
-            onClick={(e) => {
-              e.preventDefault();
-              setShowdropdown(!showdropdown);
-            }}
-            style={{
-              display: "flex",
-              width: "100%",
-              textDecoration: "none",
-              marginTop: "1em",
-              marginBottom: "1em",
-              color: "#FFFFFF",
-              gap: "0.5em",
-              padding: ".5em",
-              borderRadius: "10px",
-            }}
-          >
-            <Message sx={{ width: "15%" }} />
-            <Typography className="dropdown-text">
-              Messages{" "}
-              <span className={showdropdown ? "turn-caret" : ""}>{showdropdown ? <ArrowForwardIos sx={{ width: "50%", transform: "rotate(90deg)" }} /> : <ArrowForwardIos sx={{ width: "50%" }} />}</span>
-            </Typography>
-          </NavLink>
-        </Box>
-        {showdropdown ? (
-          <>
-            <Box
-              className="dropdown"
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                textAlign: "center",
-              }}
-            >
-              <NavLink
-                to="/"
-                style={{
-                  display: "flex",
-                  width: "100%",
-                  textDecoration: "none",
-                  color: "#FFFFFF",
-                  gap: "0.5em",
-                  padding: ".5em",
-                  borderRadius: "10px",
-                }}
-              >
-                <Typography>Inbox</Typography>
-              </NavLink>
-            </Box>
-            <Box
-              className="dropdown"
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                textAlign: "center",
-              }}
-            >
-              <NavLink
-                to="/"
-                style={{
-                  display: "flex",
-                  width: "100%",
-                  textDecoration: "none",
-                  color: "#FFFFFF",
-                  gap: "0.5em",
-                  padding: ".5em",
-                  borderRadius: "10px",
-                }}
-              >
-                <Typography>Outbox</Typography>
-              </NavLink>
-            </Box>
-            <Box
-              className="dropdown"
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                textAlign: "center",
-              }}
-            >
-              <NavLink
-                to="/"
-                style={{
-                  display: "flex",
-                  width: "100%",
-                  textDecoration: "none",
-                  color: "#FFFFFF",
-                  gap: "0.5em",
-                  padding: ".5em",
-                  borderRadius: "10px",
-                }}
-              >
-                <Typography>Compose</Typography>
-              </NavLink>
-            </Box>
-          </>
-        ) : (
-          ""
-        )}
-
         <Box
           className="messages"
           sx={{
@@ -207,7 +88,7 @@ const Sidebar = () => {
           }}
         >
           <NavLink
-            to="/"
+            to="/dashboard/notifications"
             style={{
               display: "flex",
               width: "100%",
@@ -220,35 +101,8 @@ const Sidebar = () => {
               borderRadius: "10px",
             }}
           >
-            <RoomService sx={{ width: "15%" }} />
-            <Typography>Tickets</Typography>
-          </NavLink>
-        </Box>
-
-        <Box
-          className="subscribers"
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            textAlign: "center",
-          }}
-        >
-          <NavLink
-            to="/"
-            style={{
-              display: "flex",
-              width: "100%",
-              textDecoration: "none",
-              marginTop: "1em",
-              marginBottom: "1em",
-              color: "#FFFFFF",
-              gap: "0.5em",
-              padding: ".6em .5em",
-              borderRadius: "10px",
-            }}
-          >
-            <ConfirmationNumber sx={{ width: "15%" }} />
-            <Typography>Subscribers</Typography>
+            <NotificationsIcon sx={{ width: "15%" }} />
+            <Typography>Notifications</Typography>
           </NavLink>
         </Box>
       </Box>

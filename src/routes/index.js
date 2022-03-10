@@ -1,5 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
-import Dashboard from '../pages/dashBoard/dashboard';
+import { Route, Routes } from "react-router-dom";
+import Dashboard from "../pages/dashBoard/dashboard";
 import Login from "../pages/login/login";
 import ForgotPassword from "../pages/forgotPassword/forgotPassword";
 import Home from "../pages/home/LandingPage";
@@ -8,6 +8,7 @@ import AboutPage from "../pages/about/about";
 import SubscriberNotification from "../pages/subscriberNotification";
 import NotificationDropDown from '../components/nav/Notification_icon';
 import ProfileDropDown from '../components/nav/Profile_DropDown';
+import KitchenProfile from "../pages/Kitchen_profile_dashboad/kitchen_profile";
 
 const App = () => (
   <Routes>
@@ -22,6 +23,7 @@ const App = () => (
     <Route path="/profile_dropdown" element={<ProfileDropDown  />} />
     
     
+    <Route exact path="/kitchen-profile" element={<KitchenProfile />} />
   </Routes>
 );
 
