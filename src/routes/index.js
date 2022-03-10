@@ -1,15 +1,16 @@
 import { Route, Routes } from "react-router-dom";
+
+import AboutPage from "../pages/about/about";
 import Dashboard from "../pages/dashBoard/dashboard";
-import Login from "../pages/login/login";
 import ForgotPassword from "../pages/forgotPassword/forgotPassword";
 import Home from "../pages/home/LandingPage";
-import Reset from "../pages/resetPassword/ResetPassword";
-import AboutPage from "../pages/about/about";
-import SubscriberNotification from "../pages/subscriberNotification";
+import KitchenProfile from "../pages/Kitchen_profile_dashboad/kitchen_profile";
+import Login from "../pages/login/login";
 import NotificationDropDown from '../components/nav/Notification_icon';
 import ProfileDropDown from '../components/nav/Profile_DropDown';
-import KitchenProfile from "../pages/Kitchen_profile_dashboad/kitchen_profile";
+import Reset from "../pages/resetPassword/ResetPassword";
 import SubscriberDashboardProfile from "../components/SubscriberDashboard/SubscriberDashboardProfile";
+import SubscriberNotification from "../pages/subscriberNotification";
 
 const App = () => (
   <Routes>
@@ -26,6 +27,10 @@ const App = () => (
     
     <Route exact path="/kitchen-profile" element={<KitchenProfile />} />
     <Route exact path="/profile-dashboard" element={<SubscriberDashboardProfile />} />
+    <Route path="/icon" element={<NotificationDropDown  />} />
+    <Route path="/profile_dropdown" element={<ProfileDropDown  />} />
+    
+    
   </Routes>
 );
 

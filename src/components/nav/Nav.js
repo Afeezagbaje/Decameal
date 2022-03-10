@@ -1,23 +1,23 @@
 import * as React from "react";
-import Logo from "../logo/Logo";
-import NavElement from "../navElement/NavElement";
-import Container from "@mui/material/Container";
+
 import AppBar from "@mui/material/AppBar";
+import Badge from "@mui/material/Badge";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import HamburgerMenu from "./HamburgerMenu";
+import Logo from "../logo/Logo";
+import MenuItem from "@mui/material/MenuItem";
+import NavElement from "../navElement/NavElement";
+import { NavLink } from "react-router-dom";
+import NotificationDropDown from "./Notification_icon";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import ProfileDropDown from "./Profile_DropDown";
+import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
 import navimage from "../../assets/nav_image.png";
 import navnotification from "../../assets/bell_notify.png";
-import ProfileDropDown from "./Profile_DropDown";
-import NotificationDropDown from "./Notification_icon";
-import { NavLink } from "react-router-dom";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import Avatar from "@mui/material/Avatar";
-import Badge from "@mui/material/Badge";
-import HamburgerMenu from "./HamburgerMenu";
-import PropTypes from "prop-types";
 
 const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
   return (
@@ -118,7 +118,36 @@ const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
                     <NotificationsNoneIcon />
                   </Badge>
                 )}
-                {showAvatar && <Avatar alt="Active User" src={avatar} />}
+                {showAvatar && (
+                  <Box
+                    sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+                  >
+                    <div className="dropdown">
+                      <img
+                        src={navnotification}
+                        alt="ww"
+                        style={{
+                          marginLeft: "30px",
+                          maxWidth: "100%",
+                          marginTop: "10px",
+                        }}
+                      />
+                      <div className="dropdown-content">
+                        <ProfileDropDown />
+                      </div>
+                    </div>
+                    <div className="dropdown">
+                      <img
+                        src={navimage}
+                        alt="ww"
+                        style={{ marginLeft: "40px", borderRadius: "50%" }}
+                      />
+                      <div className="dropdown-content">
+                        <NotificationDropDown />
+                      </div>
+                    </div>
+                  </Box>
+                )}
                 {!showNotification && (
                   <Button
                     style={{
