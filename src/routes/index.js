@@ -8,18 +8,21 @@ import AboutPage from "../pages/about/about";
 import SubscriberNotification from "../pages/subscriberNotification";
 import KitchenProfile from "../pages/Kitchen_profile_dashboad/kitchen_profile";
 import SubscriberDashboardProfile from "../components/SubscriberDashboard/SubscriberDashboardProfile";
+import ProtectedRoute from "./ProtectedRoute";
 
 const App = () => (
   <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/login" element={<Login />} />
     <Route path="/forgot-password" element={<ForgotPassword />} />
-    <Route path="/dashboard" element={<Dashboard />} />
-    <Route path="/dashboard/demo" element={<SubscriberNotification />} />
+    <Route path="/dashboard/" element={<ProtectedRoute />}>
+      <Route path="" element={<Dashboard />} />
+      <Route path="demo" element={<SubscriberNotification />} />
+      <Route exact path="profile" element={<SubscriberDashboardProfile />} />
+    </Route>
     <Route path="/reset-password" element={<Reset />} />
     <Route path="/about" element={<AboutPage />} />
     <Route exact path="/kitchen-profile" element={<KitchenProfile />} />
-    <Route exact path="/profile-dashboard" element={<SubscriberDashboardProfile />} />
   </Routes>
 );
 
