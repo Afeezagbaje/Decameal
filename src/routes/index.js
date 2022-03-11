@@ -9,18 +9,21 @@ import Login from "../pages/login/login";
 import Reset from "../pages/resetPassword/ResetPassword";
 import SubscriberDashboardProfile from "../components/SubscriberDashboard/SubscriberDashboardProfile";
 import SubscriberNotification from "../pages/subscriberNotification";
+import ProtectedRoute from "./ProtectedRoute";
 
 const App = () => (
   <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/login" element={<Login />} />
     <Route path="/forgot-password" element={<ForgotPassword />} />
-    <Route path="/dashboard" element={<Dashboard />} />
-    <Route path="/dashboard/demo" element={<SubscriberNotification />} />
+    <Route path="/dashboard/" element={<ProtectedRoute />}>
+      <Route path="" element={<Dashboard />} />
+      <Route path="demo" element={<SubscriberNotification />} />
+      <Route exact path="profile" element={<SubscriberDashboardProfile />} />
+    </Route>
     <Route path="/reset-password" element={<Reset />} />
     <Route path="/about" element={<AboutPage />} />
-    <Route path="/kitchen-profile" element={<KitchenProfile />} />
-    <Route path="/profile-dashboard" element={<SubscriberDashboardProfile />} />
+    <Route exact path="/kitchen-profile" element={<KitchenProfile />} />
   </Routes>
 );
 
