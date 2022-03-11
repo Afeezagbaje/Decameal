@@ -9,6 +9,7 @@ import Login from "../pages/login/login";
 import Reset from "../pages/resetPassword/ResetPassword";
 import SubscriberDashboardProfile from "../components/SubscriberDashboard/SubscriberDashboardProfile";
 import SubscriberNotification from "../pages/subscriberNotification";
+import Meal from "../pages/mealPage/meal"
 import ProtectedRoute from "./ProtectedRoute";
 
 const App = () => (
@@ -23,6 +24,8 @@ const App = () => (
     </Route>
     <Route path="/reset-password" element={<Reset />} />
     <Route path="/about" element={<AboutPage />} />
+    <Route path="/meals" element={<Meal />} />
+
     <Route exact path="/kitchen-profile" element={<KitchenProfile />} />
   </Routes>
 );
