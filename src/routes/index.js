@@ -1,13 +1,14 @@
 import { Route, Routes } from "react-router-dom";
+
+import AboutPage from "../pages/about/about";
 import Dashboard from "../pages/dashBoard/dashboard";
-import Login from "../pages/login/login";
 import ForgotPassword from "../pages/forgotPassword/forgotPassword";
 import Home from "../pages/home/LandingPage";
-import Reset from "../pages/resetPassword/ResetPassword";
-import AboutPage from "../pages/about/about";
-import SubscriberNotification from "../pages/subscriberNotification";
 import KitchenProfile from "../pages/Kitchen_profile_dashboad/kitchen_profile";
+import Login from "../pages/login/login";
+import Reset from "../pages/resetPassword/ResetPassword";
 import SubscriberDashboardProfile from "../components/SubscriberDashboard/SubscriberDashboardProfile";
+import SubscriberNotification from "../pages/subscriberNotification";
 import ProtectedRoute from "./ProtectedRoute";
 
 const App = () => (

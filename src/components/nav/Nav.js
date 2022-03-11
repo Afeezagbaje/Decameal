@@ -1,19 +1,22 @@
 import * as React from "react";
-import Logo from "../logo/Logo";
-import NavElement from "../navElement/NavElement";
-import Container from "@mui/material/Container";
+
 import AppBar from "@mui/material/AppBar";
+import Badge from "@mui/material/Badge";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import HamburgerMenu from "./HamburgerMenu";
+import Logo from "../logo/Logo";
+import MenuItem from "@mui/material/MenuItem";
+import NavElement from "../navElement/NavElement";
+import { NavLink } from "react-router-dom";
+import NotificationDropDown from "./Notification_icon";
+import ProfileDropDown from "./Profile_DropDown";
+import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
-import { NavLink } from "react-router-dom";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import Avatar from "@mui/material/Avatar";
-import Badge from "@mui/material/Badge";
-import HamburgerMenu from "./HamburgerMenu";
-import PropTypes from "prop-types";
+import navimage from "../../assets/nav_image.png";
+import navnotification from "../../assets/bell_notify.png";
 
 const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
   return (
@@ -68,19 +71,44 @@ const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
                 <NavLink to="/about" style={{ textDecoration: "none" }}>
                   <NavElement text="About Us" />{" "}
                 </NavLink>
+
                 {showNotification && (
-                  <Badge
-                    badgeContent={numOfNotification}
-                    sx={{
-                      marginLeft: "2rem",
-                      marginRight: "2rem",
-                      color: "white",
-                    }}
+                  <Box
+                    sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
                   >
-                    <NotificationsNoneIcon />
-                  </Badge>
+                    <Badge
+                      badgeContent={numOfNotification}
+                      sx={{
+                        color: "white",
+                      }}
+                    >
+                      <div className="dropdown">
+                        <img
+                          src={navnotification}
+                          alt="ww"
+                          style={{
+                            marginLeft: "30px",
+                            maxWidth: "100%",
+                            marginTop: "10px",
+                          }}
+                        />
+                        <div className="dropdown-content">
+                          <ProfileDropDown />
+                        </div>
+                      </div>
+                    </Badge>
+                    <div className="dropdown">
+                      <img
+                        src={navimage}
+                        alt="profile"
+                        style={{ marginLeft: "40px", borderRadius: "100%" }}
+                      />
+                      <div className="dropdown-content">
+                        <NotificationDropDown />
+                      </div>
+                    </div>
+                  </Box>
                 )}
-                {showAvatar && <Avatar alt="Active User" src={avatar} />}
                 {!showNotification && (
                   <Button
                     style={{
