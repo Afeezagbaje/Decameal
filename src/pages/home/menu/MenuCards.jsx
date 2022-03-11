@@ -1,6 +1,6 @@
 import { Container, Grid } from "@mui/material";
 
-import Cards from "../../../components/cards/Cards";
+import Cards from "../../../components/Cards/Cards";
 import Cereal from "../../../assets/img/cereal.png";
 import FruitSalad from "../../../assets/img/fruit-salad.png";
 import Onion from "../../../assets/img/onionsalad.png";
