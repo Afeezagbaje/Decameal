@@ -11,7 +11,6 @@ import MenuItem from "@mui/material/MenuItem";
 import NavElement from "../navElement/NavElement";
 import { NavLink } from "react-router-dom";
 import NotificationDropDown from "./Notification_icon";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import ProfileDropDown from "./Profile_DropDown";
 import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
@@ -69,78 +68,40 @@ const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
                 <NavLink to="/meals" style={{ textDecoration: "none" }}>
                   <NavElement text="Meals" />{" "}
                 </NavLink>
-                <NavLink
-                  to="/about"
-                  style={{ textDecoration: "none", marginRight: "20px" }}
-                >
+                <NavLink to="/about" style={{ textDecoration: "none" }}>
                   <NavElement text="About Us" />{" "}
                 </NavLink>
 
-                <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-                  <div className="dropdown">
-                    <img
-                      src={navnotification}
-                      alt="ww"
-                      style={{ marginLeft: "30px", maxWidth: "100%",marginTop:"10px" }}
-                    />
-                    <div className="dropdown-content">
-                      <ProfileDropDown />
-                    </div>
-                  </div>
-                  <div className="dropdown">
-                    <img
-                      src={navimage}
-                      alt="ww"
-                      style={{ marginLeft: "40px", borderRadius: "50%" }}
-                    />
-                    <div className="dropdown-content">
-                      <NotificationDropDown />
-                    </div>
-                  </div>
-                </Box>
-                <Button
-                  style={{ marginLeft: "30px", width: "142px", height: "53px" }}
-                  variant="contained"
-                  color="success"
-                  href="/login"
-                >
-                  Login
-                </Button>
                 {showNotification && (
-                  <Badge
-                    badgeContent={numOfNotification}
-                    sx={{
-                      marginLeft: "2rem",
-                      marginRight: "2rem",
-                      color: "white",
-                    }}
-                  >
-                    <NotificationsNoneIcon />
-                  </Badge>
-                )}
-                {showAvatar && (
                   <Box
                     sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
                   >
-                    <div className="dropdown">
-                      <img
-                        src={navnotification}
-                        alt="ww"
-                        style={{
-                          marginLeft: "30px",
-                          maxWidth: "100%",
-                          marginTop: "10px",
-                        }}
-                      />
-                      <div className="dropdown-content">
-                        <ProfileDropDown />
+                    <Badge
+                      badgeContent={numOfNotification}
+                      sx={{
+                        color: "white",
+                      }}
+                    >
+                      <div className="dropdown">
+                        <img
+                          src={navnotification}
+                          alt="ww"
+                          style={{
+                            marginLeft: "30px",
+                            maxWidth: "100%",
+                            marginTop: "10px",
+                          }}
+                        />
+                        <div className="dropdown-content">
+                          <ProfileDropDown />
+                        </div>
                       </div>
-                    </div>
+                    </Badge>
                     <div className="dropdown">
                       <img
                         src={navimage}
-                        alt="ww"
-                        style={{ marginLeft: "40px", borderRadius: "50%" }}
+                        alt="profile"
+                        style={{ marginLeft: "40px", borderRadius: "100%" }}
                       />
                       <div className="dropdown-content">
                         <NotificationDropDown />

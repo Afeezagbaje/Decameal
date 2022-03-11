@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 
 import Afang from "../../../assets/img/Afang.png";
-import Cards from "../../../components/Cards/Cards";
+import Cards from "../../../components/cards/Cards";
 import Egusi from "../../../assets/img/Egusi.png";
 import ExploreButton from "./ExploreButton";
 import Jollof_image from "../../../assets/img/chicken.png";
