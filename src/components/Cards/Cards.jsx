@@ -9,12 +9,12 @@ import React from "react";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import Typography from "@mui/material/Typography";
 
-function Cards({ image, title, body }) {
+function Cards({ image, title, body, stars }) {
   return (
     <div>
       <div className="">
         <Card
-          sx={{ maxWidth: "100%" }}
+          sx={{ maxWidth: 312 }}
           md={{
             maxWidth: 400,
           }}

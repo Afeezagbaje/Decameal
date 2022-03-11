@@ -6,6 +6,7 @@ import Home from "../pages/home/LandingPage";
 import Reset from "../pages/resetPassword/ResetPassword";
 import AboutPage from "../pages/about/about";
 import SubscriberNotification from "../pages/subscriberNotification";
+import Meal from "../pages/mealPage/meal"
 
 const App = () => (
   <Routes>
@@ -16,6 +17,8 @@ const App = () => (
     <Route path="/dashboard/demo" element={<SubscriberNotification />} />
     <Route path="/reset-password" element={<Reset />} />
     <Route path="/about" element={<AboutPage />} />
+    <Route path="/meals" element={<Meal />} />
+
   </Routes>
 );
 
