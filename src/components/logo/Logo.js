@@ -1,25 +1,26 @@
 import React from "react";
-import PropTypes from "prop-types";
-import "./logo.css";
-import {ReactComponent as LogoSVG} from './logo.svg';
+import { ReactComponent as LogoSVG } from "./logo.svg";
+import { NavLink } from "react-router-dom";
 
-const Logo = ({ textColor, logoStyle }) => {
-  const color = {
-    color: textColor ? textColor : "white",
-  }
-
+const Logo = () => {
   return (
-    <div className="logo" style={logoStyle}>
-      <div className="text"  style={color}>DecaMea</div>
-      <div className="icon">
-        <LogoSVG />
+    <NavLink to="/" style={{ textDecoration: "none", color: "white" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "36px",
+          fontWeight: "900",
+        }}
+      >
+        DecaMea
+        <span>
+          <LogoSVG />
+        </span>
       </div>
-    </div>
+    </NavLink>
   );
-};
-
-Logo.propTypes = {
-  logoStyle: PropTypes.object,
 };
 
 export default Logo;

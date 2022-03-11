@@ -8,6 +8,8 @@ import Notification from "../components/notification/index";
 import Footer from "../components/footer/Footer";
 import TopHero from "../components/topHero";
 import Nav from "../components/nav/Nav";
+import SubscriberDashboardProfile from "../components/SubscriberDashboard"
+
 
 const Welcome = () => {
   const dispatch = useAppDispatch();

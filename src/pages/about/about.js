@@ -15,6 +15,7 @@ const AboutPage = () => {
   return (
     <>
       <Nav />
+
       <Box
         md={{
           height: 912,
@@ -28,46 +29,48 @@ const AboutPage = () => {
         }}
         className="hero"
       >
-        <Box
-          style={{
-            paddingTop: 276,
-            color: "#fff",
-          }}
-          className="header-content"
-        >
+        <Container>
           <Box
-            className="about-page-title"
             style={{
-              fontFamily: "Poppins",
-              fontStyle: "normal",
-              fontWeight: "bold",
+              paddingTop: 276,
+              color: "#fff",
             }}
+            className="header-content"
           >
-            <span className="We">We</span> serve you <br /> Healthy meals
+            <Box
+              className="about-page-title"
+              style={{
+                fontFamily: "Poppins",
+                fontStyle: "normal",
+                fontWeight: "bold",
+              }}
+            >
+              <span className="We">We</span> serve you <br /> Healthy meals
+            </Box>
+            <Box className="about-page-sub-title">
+              We promise you will enjoy and find your favorite meals, eat what
+              you want and save your precious time
+            </Box>
+            <Button
+              fullWidth
+              type="submit"
+              variant="contained"
+              sx={{
+                backgroundColor: "#34A853",
+                height: "53px",
+                maxWidth: "185px",
+                marginTop: "25px",
+                borderRadius: "7px",
+                marginBottom: "238px",
+                fontFamily: "Poppins",
+                fontStyle: "normal",
+                fontWeight: "bold",
+              }}
+            >
+              Explore Meals
+            </Button>
           </Box>
-          <Box className="about-page-sub-title">
-            We promise you will enjoy and find your favorite meals, eat what you
-            want and save your precious time
-          </Box>
-          <Button
-            fullWidth
-            type="submit"
-            variant="contained"
-            sx={{
-              backgroundColor: "#34A853",
-              height: "53px",
-              maxWidth: "185px",
-              marginTop: "25px",
-              borderRadius: "7px",
-              marginBottom: "238px",
-              fontFamily: "Poppins",
-              fontStyle: "normal",
-              fontWeight: "bold",
-            }}
-          >
-            Explore Meals
-          </Button>
-        </Box>
+        </Container>
       </Box>
       <Box
         style={{

@@ -1,30 +1,24 @@
 import * as React from "react";
-import Logo from "../logo/Logo";
-import NavElement from "../navElement/NavElement";
-import Container from "@mui/material/Container";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import AppBar from "@mui/material/AppBar";
+import Badge from "@mui/material/Badge";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import HamburgerMenu from "./HamburgerMenu";
+import Logo from "../logo/Logo";
+import MenuItem from "@mui/material/MenuItem";
+import NavElement from "../navElement/NavElement";
+import { NavLink } from "react-router-dom";
+import NotificationDropDown from "./Notification_icon";
+import ProfileDropDown from "./Profile_DropDown";
+import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
+import navimage from "../../assets/nav_image.png";
+import navnotification from "../../assets/bell_notify.png";
 
-import { NavLink } from "react-router-dom";
-
-const Nav = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
+const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
   return (
     <AppBar
       sx={{
@@ -45,72 +39,28 @@ const Nav = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <Logo textColor="white" />
+            <Logo />
           </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography
-                  variant="h6"
-                  noWrap
-                  component="div"
-                  textAlign="center"
-                >
-                  <NavLink to="/" style={{ textDecoration: "none" }}>
-                    <NavElement text="Home" />{" "}
-                  </NavLink>
-                  <NavLink to="/meals" style={{ textDecoration: "none" }}>
-                    <NavElement text="Meals" />{" "}
-                  </NavLink>
-                  <NavLink to="/about" style={{ textDecoration: "none" }}>
-                    <NavElement text="About Us" />{" "}
-                  </NavLink>
-                  <Button variant="contained" href="/login">
-                    Login
-                  </Button>
-                </Typography>
-              </MenuItem>
-            </Menu>
-          </Box>
+          <HamburgerMenu
+            showNotification={showNotification}
+            numOfNotification={numOfNotification}
+            showAvatar={showAvatar}
+            avatar={avatar}
+          />
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+            }}
           >
             <Logo />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
-            <MenuItem onClick={handleCloseNavMenu}>
+            <MenuItem>
               <Button sx={{ my: 2, color: "white", display: "flex" }}>
                 <NavLink to="/" style={{ textDecoration: "none" }}>
                   <NavElement text="Home" />{" "}
@@ -121,14 +71,72 @@ const Nav = () => {
                 <NavLink to="/about" style={{ textDecoration: "none" }}>
                   <NavElement text="About Us" />{" "}
                 </NavLink>
-                <Button
-                  style={{ marginLeft: "20px", width: "142px", height: "53px" }}
-                  variant="contained"
-                  color="success"
-                  href="/login"
-                >
-                  Login
-                </Button>
+
+                {showNotification && (
+                  <Box
+                    sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+                  >
+                    <Badge
+                      badgeContent={numOfNotification}
+                      sx={{
+                        color: "white",
+                      }}
+                    >
+                      <div className="dropdown">
+                        <img
+                          src={navnotification}
+                          alt="ww"
+                          style={{
+                            marginLeft: "30px",
+                            maxWidth: "100%",
+                            marginTop: "10px",
+                          }}
+                        />
+                        <div className="dropdown-content">
+                          <ProfileDropDown />
+                        </div>
+                      </div>
+                    </Badge>
+                    <div className="dropdown">
+                      <img
+                        src={navimage}
+                        alt="profile"
+                        style={{ marginLeft: "40px", borderRadius: "100%" }}
+                      />
+                      <div className="dropdown-content">
+                        <NotificationDropDown />
+                      </div>
+                    </div>
+                  </Box>
+                )}
+                {!showNotification && (
+                  <Button
+                    style={{
+                      marginLeft: "20px",
+                      width: "150px",
+                      padding: "10px",
+                    }}
+                    variant="contained"
+                    color="success"
+                    href="/login"
+                  >
+                    Login
+                  </Button>
+                )}
+                {showNotification && (
+                  <Button
+                    style={{
+                      marginLeft: "20px",
+                      width: "150px",
+                      padding: "10px",
+                    }}
+                    variant="contained"
+                    color="success"
+                    href="/"
+                  >
+                    Logout
+                  </Button>
+                )}
               </Button>
             </MenuItem>
           </Box>
@@ -136,6 +144,13 @@ const Nav = () => {
       </Container>
     </AppBar>
   );
+};
+
+Nav.propTypes = {
+  showNotification: PropTypes.bool,
+  numOfNotification: PropTypes.number,
+  showAvatar: PropTypes.bool,
+  avatar: PropTypes.string,
 };
 
 export default Nav;
