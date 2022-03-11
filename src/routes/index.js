@@ -7,6 +7,7 @@ import Reset from "../pages/resetPassword/ResetPassword";
 import AboutPage from "../pages/about/about";
 import SubscriberNotification from "../pages/subscriberNotification";
 import KitchenProfile from "../pages/Kitchen_profile_dashboad/kitchen_profile";
+import SubscriberDashboardProfile from "../components/SubscriberDashboard/SubscriberDashboardProfile";
 
 const App = () => (
   <Routes>
@@ -18,6 +19,7 @@ const App = () => (
     <Route path="/reset-password" element={<Reset />} />
     <Route path="/about" element={<AboutPage />} />
     <Route exact path="/kitchen-profile" element={<KitchenProfile />} />
+    <Route exact path="/profile-dashboard" element={<SubscriberDashboardProfile />} />
   </Routes>
 );
 
