@@ -9,6 +9,7 @@ import SubscriberNotification from "../pages/subscriberNotification";
 import NotificationDropDown from '../components/nav/Notification_icon';
 import ProfileDropDown from '../components/nav/Profile_DropDown';
 import KitchenProfile from "../pages/Kitchen_profile_dashboad/kitchen_profile";
+import SubscriberDashboardProfile from "../components/SubscriberDashboard/SubscriberDashboardProfile";
 
 const App = () => (
   <Routes>
@@ -24,6 +25,7 @@ const App = () => (
     
     
     <Route exact path="/kitchen-profile" element={<KitchenProfile />} />
+    <Route exact path="/profile-dashboard" element={<SubscriberDashboardProfile />} />
   </Routes>
 );
 
