@@ -5,7 +5,7 @@ import Sidebar from "../components/sideBar/sidebar";
 import { Box } from "@mui/system";
 
 const ProtectedRoute = () => {
-  const isAuthenticated = !getSavedUserToken();
+  const isAuthenticated = !!getSavedUserToken();
   return isAuthenticated ? (
     <Box sx={{ display: "flex" }}>
       <Sidebar />

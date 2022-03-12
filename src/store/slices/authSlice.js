@@ -20,13 +20,14 @@ const authSlice = createSlice({
     },
 
     loginSuccess(state, action) {
-      saveUserToken(action.payload)
+      saveUserToken(action.payload);
       return {
         ...state,
         loading: false,
         data: action.payload,
         token: action.payload,
         errors: null,
+        message: "Successfully Login",
       };
     },
 
@@ -37,11 +38,19 @@ const authSlice = createSlice({
         errors: action.payload,
         data: [],
         token: null,
+        message: "Login failed, invalid credentials",
+      };
+    },
+    clearMsg(state) {
+      return {
+        ...state,
+        errors: null,
+        message: "",
       };
     },
   },
 });
 
-export const { login, loginSuccess, loginFailed } = authSlice.actions;
+export const { login, loginSuccess, loginFailed, clearMsg } = authSlice.actions;
 
 export default authSlice.reducer;
