@@ -37,7 +37,7 @@ const Login = () => {
   };
 
   return (
-    <Box className="container">
+    <Box className="lg-container">
       <Box
         className="bg_container"
         sx={{ display: { xs: "none", md: "block" }, marginRight: "5px" }}
