@@ -1,37 +1,61 @@
 import React from "react";
 import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { Box, Button, TextField, Typography } from "@mui/material";
+import {
+  Alert,
+  Box,
+  Button,
+  Snackbar,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { useState, useEffect } from "react";
-import axios from "axios";
 
-import { useAppSelector } from "../../store/hooks";
-import { loginSuccess } from "../../store/slices/authSlice";
+import { useAppSelector, useAppDispatch } from "../../store/hooks";
+import { login, clearMsg } from "../../store/slices/authSlice";
 
 const Login = () => {
-  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+  const [errMsg, setErrMsg] = useState("");
+  const [successMsg, setSuccessMsg] = useState("");
+
   const [passwordShown, setPasswordShown] = useState(false);
   const [loginCredentials, setLoginCredentials] = useState({
     email: "",
     password: "",
-  }); // {email: ol@gmail.com, password: pfsf}
+  });
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    const loginURL = "http://0.0.0.0:8000/api/v1/auth/login/";
-    try {
-      const reqBody = {
-        email: loginCredentials.email,
-        password: loginCredentials.password,
-      };
-      const response = await axios.post(loginURL, reqBody);
-      console.log(response);
-      localStorage.setItem("decameal_token", response.data.data.token);
-      loginSuccess({ token: response.data.data.token, data: [reqBody] });
-      navigate("/");
-    } catch (e) {
-      console.log(e.response.data);
+  // Fetching data from store
+  const auth = useAppSelector((store) => store.auth);
+  const { token, errors, message, loading, data } = auth;
+
+  // Handle already logged in user
+  useEffect(() => {
+    if (!loading && !errors && !!token && !!data) {
+      window.location = "/dashboard";
     }
+  }, [loading, token, errors, data]);
+
+  // Handle error and success message
+  useEffect(() => {
+    if (!loading && !!message && !!errors) {
+      setErrMsg(message);
+      return;
+    }
+    if (!loading && !errors && !!message) {
+      setSuccessMsg(message);
+    }
+    dispatch(clearMsg());
+  }, [dispatch, message, loading, errors]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { email, password } = loginCredentials;
+    if (!email || !password) {
+      setErrMsg("Email or Password cannot be blank");
+      return;
+    }
+    dispatch(login(loginCredentials));
   };
 
   const handleCredentialChange = (e) => {
@@ -41,13 +65,10 @@ const Login = () => {
     }));
   };
 
-  const auth = useAppSelector((state) => state.auth);
-
-  useEffect(() => {
-    if (auth && auth.token) {
-      window.location = "/";
-    }
-  });
+  const handleSnackBarClose = () => {
+    setErrMsg("");
+    setSuccessMsg("");
+  };
 
   return (
     <Box className="lg-container">
@@ -63,7 +84,7 @@ const Login = () => {
           Welcome!
         </Typography>
         <Box className="form_container">
-          <form className="login_form" onSubmit={handleLogin}>
+          <form className="login_form" onSubmit={handleSubmit}>
             <Box className="password_container">
               <TextField
                 fullWidth
@@ -115,6 +136,22 @@ const Login = () => {
           </form>
         </Box>
       </Box>
+
+      <Snackbar
+        open={!!errMsg || !!successMsg}
+        autoHideDuration={5000}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        onClose={handleSnackBarClose}
+      >
+        <Alert
+          onClose={handleSnackBarClose}
+          severity={!!errMsg ? "error" : "success"}
+          sx={{ width: "100%" }}
+        >
+          {errMsg}
+          {successMsg}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };

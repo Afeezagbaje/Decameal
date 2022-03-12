@@ -4,12 +4,9 @@ import { getSavedUserToken } from "../utils";
 const token = getSavedUserToken() ? getSavedUserToken() : "";
 
 const axios = Axios.create({
-    baseURL: "https://decameal.herokuapp.com/api/v1/",
-  // baseURL: process.env.REACT_APP_BASE_URL
-  // baseURL: "https://jsonplaceholder.typicode.com/login",
+  baseURL: "https://decameal.herokuapp.com/api/v1/",
   headers: {
     Accept: "application/json",
-    Authorization: "Token " + token,
   },
 });
 
@@ -20,7 +17,7 @@ export const handleAxiosError = (error) => {
       // The request was made and the server responded with a status code
       // that falls out of the range of 2xx
       if (error.response.data) {
-        errorResponse = error.response.data.error || error.response.data;
+        errorResponse = error.response.data || error.response.data;
       }
     } else {
       // Something happened in setting up the request that triggered an Error
@@ -32,6 +29,15 @@ export const handleAxiosError = (error) => {
   }
 
   return errorResponse;
+};
+
+export const headers = () => {
+  return {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Token " + token,
+    },
+  };
 };
 
 export default axios;
