@@ -14,6 +14,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import UserProfile from "../pages/userProfile/userProfile";
 import EditProfile from "../pages/editProfile/editProfile";
 
+
 const App = () => (
   <Routes>
     <Route path="/" element={<Home />} />
