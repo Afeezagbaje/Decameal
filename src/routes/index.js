@@ -7,7 +7,7 @@ import Home from "../pages/home/LandingPage";
 import KitchenProfile from "../pages/Kitchen_profile_dashboad/kitchen_profile";
 import Login from "../pages/login/login";
 import Reset from "../pages/resetPassword/ResetPassword";
-import SubscriberDashboardProfile from "../components/SubscriberDashboard/SubscriberDashboardProfile";
+import SubscriberProfile from "../components/subscriberProfile/subscriberProfile";
 import SubscriberNotification from "../pages/subscriberNotification";
 import Meal from "../pages/mealPage/meal"
 import ProtectedRoute from "./ProtectedRoute";
@@ -20,13 +20,14 @@ const App = () => (
     <Route path="/dashboard/" element={<ProtectedRoute />}>
       <Route path="" element={<Dashboard />} />
       <Route path="demo" element={<SubscriberNotification />} />
-      <Route exact path="profile" element={<SubscriberDashboardProfile />} />
+      <Route exact path="profile" element={<SubscriberProfile />} />
+      <Route exact path="kitchen-profile" element={<KitchenProfile />} />
     </Route>
     <Route path="/reset-password" element={<Reset />} />
     <Route path="/about" element={<AboutPage />} />
     <Route path="/meals" element={<Meal />} />
 
-    <Route exact path="/kitchen-profile" element={<KitchenProfile />} />
+   
   </Routes>
 );
 
