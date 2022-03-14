@@ -39,8 +39,8 @@ export default function FixedContainer() {
               <Grid item xs={3}>
                 <List listTitle="Install App" />
                 <div className="download">
-                  <img src={GoogleStoreImg} alt="mm" />
-                  <img src={AppStoreImg} alt="mm" />
+                  <img className="img" src={GoogleStoreImg} alt="mm" />
+                  <img className="img" src={AppStoreImg} alt="mm" />
                 </div>
               </Grid>
             </Grid>
