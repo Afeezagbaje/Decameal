@@ -5,9 +5,9 @@ import { Home, AccountCircle } from "@mui/icons-material";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import "./sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ({ styling }) => {
   return (
-    <Box className="side-bar">
+    <Box className="side-bar" sx={styling}>
       <Box className="top-side-bar">
         <Typography
           variant="h1"
