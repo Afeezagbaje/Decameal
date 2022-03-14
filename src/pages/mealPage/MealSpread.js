@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from "react";
-import DUMMY_DATA from "./data/mealConstant";
+// import DUMMY_DATA from "./data/mealConstant";
 import Cards from "../../components/Cards/Cards";
 import classes from "./meal.module.css";
+// import axios from "axios";
 import { Button, Box, Container } from "@mui/material";
 
 const MealSpread = () => {
-  const [data, setData] = useState(DUMMY_DATA);
+  const [data, setData] = useState([]);
+  const fectchData = async () => { 
+    const res = await fetch("https://decameal.herokuapp.com/api/v1/meals/")
+     const response = await res.json()  
+    const {data} = response
+    setData(data.meals);
+    console.log(data.meals)
 
+  }
   useEffect(() => {
-    setData(DUMMY_DATA);
+    fectchData()
   }, []);
 
   return (
@@ -26,7 +34,7 @@ const MealSpread = () => {
               data.map((item) => (
                 <Cards
                   key={item.id}
-                  image={item.img ? item.img : DUMMY_DATA[1].img}
+                  image={item.cover_img ? item.cover_img : "https://allnigerianfoods.com/wp-content/uploads/ewa-agoyin-recipe-500x500.jpg"}
                   title={item.title}
                   body={item.description}
                 />
