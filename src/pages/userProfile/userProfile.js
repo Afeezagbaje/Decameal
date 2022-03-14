@@ -17,7 +17,7 @@ const EditProfileButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-const UserProfileUI = ({
+const UserProfile = ({
   fullName,
   image,
   userRole,
@@ -85,7 +85,7 @@ const UserProfileUI = ({
               }}
             ></Box>
             <Box>
-              <Link to="/edit-profile">
+              <Link to="/dashboard/edit-profile">
                 <EditProfileButton
                   variant="contained"
                   color="success"
@@ -250,4 +250,4 @@ const UserProfileUI = ({
   );
 };
 
-export default UserProfileUI;
+export default UserProfile;

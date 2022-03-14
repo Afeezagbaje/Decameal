@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
-import Nav from "../../components/nav/Nav";
+import Nav from "../nav/Nav";
 import React, { useState } from "react";
-import Sidebar from "../../components/sideBar/sidebar";
+import Sidebar from "../sideBar/sidebar";
 import { useMediaQuery } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import ViewSidebarOutlinedIcon from "@mui/icons-material/ViewSidebarOutlined";
