@@ -21,7 +21,7 @@ const App = () => (
     <Route path="/forgot-password" element={<ForgotPassword />} />
     <Route path="/dashboard/" element={<ProtectedRoute />}>
       <Route path="" element={<SubscriberDashboardProfile />} />
-      <Route path="demo" element={<SubscriberNotification />} />
+      <Route path="notification" element={<SubscriberNotification />} />
       <Route path="profile" element={<UserProfile />} />
       <Route path="edit-profile" element={<SubscriberProfile />} />
     </Route>

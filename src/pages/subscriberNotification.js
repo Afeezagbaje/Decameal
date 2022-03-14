@@ -1,6 +1,6 @@
 import React from "react";
-import MainOne from "./components/main_one";
-import MainTwo from "./components/main_two";
+import MainOne from "../components/subscriberNotification/mainOne";
+import MainTwo from "../components/subscriberNotification/mainTwo";
 import "./notifications.css";
 
 
