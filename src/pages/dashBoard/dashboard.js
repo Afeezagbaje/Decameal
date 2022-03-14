@@ -5,9 +5,9 @@ import Sidebar from "../../components/sideBar/sidebar";
 import { useMediaQuery } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import ViewSidebarOutlinedIcon from "@mui/icons-material/ViewSidebarOutlined";
-import SubscriberDashboardProfile from "../../components/SubscriberDashboard/SubscriberDashboardProfile";
+// import SubscriberDashboardProfile from "../../components/SubscriberDashboard/SubscriberDashboardProfile";
 // import MainContent from "../../components/dashboard/mainContent/mainContent";
-// import SubscriberNotification from "../../components/dashboard/notification/subscriberNotification";
+import SubscriberNotification from "../../components/dashboard/notification/subscriberNotification";
 // import SubscriberProfile from "../../components/dashboard/profile/subscriberProfile";
 
 const Dashboard = () => {
@@ -59,9 +59,9 @@ const Dashboard = () => {
           }}
         >
           {/* <MainContent /> */}
-          {/* <SubscriberNotification /> */}
+          <SubscriberNotification />
           {/* <SubscriberProfile /> */}
-          <SubscriberDashboardProfile />
+          {/* <SubscriberDashboardProfile /> */}
         </Box>
       </Box>
     </div>
