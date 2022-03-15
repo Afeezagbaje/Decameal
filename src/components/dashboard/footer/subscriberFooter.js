@@ -14,7 +14,6 @@ const Footer = () => {
         backgroundColor: "#fff",
         height: "159px",
         borderRadius: "5px",
-        // color: "white",
       }}
     >
       <Typography
@@ -29,7 +28,7 @@ const Footer = () => {
         style={{
           display: "flex",
           gap: "32px",
-          padding: "11px 52px"
+          padding: "11px 52px",
         }}
       >
         <Box
@@ -40,7 +39,6 @@ const Footer = () => {
         >
           <Box
             style={{
-              
               height: "100px",
             }}
           >
@@ -70,7 +68,6 @@ const Footer = () => {
         >
           <Box
             style={{
-              
               height: "100px",
             }}
           >
@@ -100,7 +97,6 @@ const Footer = () => {
         >
           <Box
             style={{
-              
               height: "100px",
             }}
           >

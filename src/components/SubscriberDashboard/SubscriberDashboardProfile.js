@@ -5,6 +5,8 @@ import { ReactComponent as SmallLessIcon } from "./svg/small-left-caret.svg";
 import { ReactComponent as BigLessIcon } from "./svg/big-left-caret.svg";
 import { ReactComponent as DropdownIcon } from "./svg/dropdown-caret.svg";
 import Footer from "../dashboard/footer/subscriberFooter";
+import DashboardSearchBar from "../dashboard/searchBar/subscriberSearchBar";
+
 
 const SubscriberDashboardProfile = ({
   Text1,
@@ -23,6 +25,9 @@ const SubscriberDashboardProfile = ({
 }) => {
   return (
     <>
+    <Box style={{ marginBottom: "63px" }}>
+        <DashboardSearchBar />
+        </Box>
       <Box
         style={{
           display: "flex",
