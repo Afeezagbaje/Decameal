@@ -10,7 +10,7 @@ const DashboardLayer = ({ children }) => {
   const isTabletView = useMediaQuery("(max-width:900px)");
   const [showSidebar, setShowSidebar] = useState(false);
   return (
-    <div style={{ backgroundColor: "#8EA739", height: "120vh" }}>
+    <div style={{ backgroundColor: "#8EA739", minHeight: "120vh" }}>
       <Nav
         showNotification={true}
         numOfNotification={3}
