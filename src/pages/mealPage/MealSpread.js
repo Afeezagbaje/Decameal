@@ -1,23 +1,17 @@
-import React, { useState, useEffect } from "react";
-// import DUMMY_DATA from "./data/mealConstant";
+import React, { useEffect } from "react";
 import Cards from "../../components/Cards/Cards";
 import classes from "./meal.module.css";
-// import axios from "axios";
 import { Button, Box, Container } from "@mui/material";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { meals } from "../../store/slices/meals";
 
 const MealSpread = () => {
-  const [data, setData] = useState([]);
-  const fectchData = async () => { 
-    const res = await fetch("https://decameal.herokuapp.com/api/v1/meals/")
-     const response = await res.json()  
-    const {data} = response
-    setData(data.meals);
-    console.log(data.meals)
+  const dispatch = useAppDispatch();
+  const {data} = useAppSelector((state) => state.meals);
 
-  }
   useEffect(() => {
-    fectchData()
-  }, []);
+    dispatch(meals());
+  }, [dispatch]);
 
   return (
     <Box className={classes.flexcontainer}>
@@ -30,11 +24,15 @@ const MealSpread = () => {
           }}
         >
           <Box className={classes.foodie}>
-            {data &&
-              data.map((item) => (
+            {data && data.meals &&
+              data.meals.map((item) => (
                 <Cards
                   key={item.id}
-                  image={item.cover_img ? item.cover_img : "https://allnigerianfoods.com/wp-content/uploads/ewa-agoyin-recipe-500x500.jpg"}
+                  image={
+                    item.cover_img
+                      ? item.cover_img
+                      : "https://allnigerianfoods.com/wp-content/uploads/ewa-agoyin-recipe-500x500.jpg"
+                  }
                   title={item.title}
                   body={item.description}
                 />
