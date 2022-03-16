@@ -13,7 +13,6 @@ import { useState, useEffect } from "react";
 
 import { useAppSelector, useAppDispatch } from "../../store/hooks";
 import { login, clearMsg } from "../../store/slices/authSlice";
-import { user } from "../../store/slices/userSlice";
 
 const Login = () => {
   const dispatch = useAppDispatch();
@@ -44,11 +43,11 @@ const Login = () => {
       return;
     }
     if (!loading && !errors && !!message) {
-      dispatch(user());
       setSuccessMsg(message);
     }
     dispatch(clearMsg());
   }, [dispatch, message, loading, errors]);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,7 +56,7 @@ const Login = () => {
       setErrMsg("Email or Password cannot be blank");
       return;
     }
-    dispatch(login(loginCredentials));
+    dispatch(login(loginCredentials)); 
   };
 
   const handleCredentialChange = (e) => {

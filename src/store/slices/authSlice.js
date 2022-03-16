@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { saveUserToken, getSavedUserToken } from "../../utils";
+import { saveUserToken, getSavedUserToken, saveUserId } from "../../utils";
 
 const authSlice = createSlice({
   name: "auth",
@@ -9,6 +9,9 @@ const authSlice = createSlice({
     errors: null,
     data: [],
     token: getSavedUserToken(),
+    isFetchingUser: false,
+    userError: null,
+    userData: [],
   },
 
   reducers: {
@@ -20,13 +23,15 @@ const authSlice = createSlice({
     },
 
     loginSuccess(state, action) {
-      saveUserToken(action.payload.data.token);
+      saveUserToken(action.payload.token);
+      saveUserId(JSON.stringify(action.payload.user))
       return {
         ...state,
         loading: false,
-        data: action.payload,
-        token: action.payload,
+        data: action.payload.token,
+        token: action.payload.token,
         errors: null,
+        userData: action.payload.user,
         message: "Successfully Login",
       };
     },
