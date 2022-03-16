@@ -8,7 +8,16 @@ export async function login(payload) {
       data: payload,
     };
     const response = await axios(config);
-    return response.data;
+
+
+    const userResponse = await axios.get("users/",  {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Token " + response.data.data.token,
+      },
+    });
+
+    return {token: response.data.data.token, user: userResponse.data[0]["id"]};
   } catch (error) {
     throw handleAxiosError(error);
   }
