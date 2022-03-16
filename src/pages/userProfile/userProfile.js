@@ -27,6 +27,8 @@ const UserProfile = ({
   stack,
   address,
 }) => {
+
+
     const isTabletView = useMediaQuery("(max-width:670px)");
   const name = fullName ? fullName : "Anthony Obatola";
   const role = userRole ? userRole : "Decadev";
@@ -40,6 +42,8 @@ const UserProfile = ({
   const location = address
     ? address
     : "7, Asajon way, Sangotedo, Ajah, Lagos State";
+
+
 
   return (
     <div style={{ width: "100%", height: "100%" }}>
