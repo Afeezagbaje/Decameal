@@ -11,7 +11,7 @@ import Reset from "../pages/resetPassword/ResetPassword";
 import SubscriberNotification from "../pages/subscriberNotification";
 import Meal from "../pages/mealPage/meal"
 import ProtectedRoute from "./ProtectedRoute";
-import UserProfile from "../pages/userProfile/userProfile";
+import UsersProfile from "../pages/userProfile/index";
 import EditProfile from "../pages/editProfile/editProfile";
 
 const App = () => (
@@ -22,7 +22,7 @@ const App = () => (
     <Route path="/dashboard/" element={<ProtectedRoute />}>
       <Route path="" element={<SubscriberDashboardProfile />} />
       <Route path="notification" element={<SubscriberNotification />} />
-      <Route path="profile" element={<UserProfile />} />
+      <Route path="profile" element={<UsersProfile />} />
       <Route path="edit-profile" element={<EditProfile />} />
     </Route>
     <Route path="/reset-password" element={<Reset />} />

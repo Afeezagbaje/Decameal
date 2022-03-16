@@ -18,7 +18,8 @@ const EditProfileButton = styled(Button)(({ theme }) => ({
 }));
 
 const UserProfile = ({
-  fullName,
+  firstName,
+  lastName,
   image,
   userRole,
   phoneNumber,
@@ -27,10 +28,9 @@ const UserProfile = ({
   stack,
   address,
 }) => {
-
-
-    const isTabletView = useMediaQuery("(max-width:670px)");
-  const name = fullName ? fullName : "Anthony Obatola";
+  const isTabletView = useMediaQuery("(max-width:670px)");
+  const userFirstName = firstName ? firstName : "Anthony";
+  const userLastName = lastName ? lastName : "Obatola";
   const role = userRole ? userRole : "Decadev";
   const userEmail = email ? email : "example@email.com";
   const number = phoneNumber ? phoneNumber : "08000000000";
@@ -42,8 +42,7 @@ const UserProfile = ({
   const location = address
     ? address
     : "7, Asajon way, Sangotedo, Ajah, Lagos State";
-
-
+  const name = `${userFirstName} ${userLastName}`;
 
   return (
     <div style={{ width: "100%", height: "100%" }}>
@@ -157,7 +156,10 @@ const UserProfile = ({
             </Box>
             <Box
               className="profile-info-body"
-              sx={{ marginTop: "50px", marginLeft: isTabletView ? "0" : "50px" }}
+              sx={{
+                marginTop: "50px",
+                marginLeft: isTabletView ? "0" : "50px",
+              }}
             >
               <Box
                 className="phone-number"

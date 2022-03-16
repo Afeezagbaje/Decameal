@@ -12,6 +12,6 @@ function* userProfileSaga(action) {
     yield put(userProfileFailed(error));
   }
 }
-export function* watchuserProfileSaga() {
+export function* watchUserProfileSaga() {
   yield takeLatest(userProfile.type, userProfileSaga);
 }

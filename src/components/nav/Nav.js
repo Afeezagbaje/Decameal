@@ -19,6 +19,12 @@ import navimage from "../../assets/nav_image.png";
 import navnotification from "../../assets/bell_notify.png";
 
 const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
+
+  const handleLogOut = () => {
+    localStorage.clear();
+    window.location = "/";
+  }
+
   return (
     <AppBar
       sx={{
@@ -115,6 +121,7 @@ const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
                       marginLeft: "20px",
                       width: "150px",
                       padding: "10px",
+                      color: "white",
                     }}
                     variant="contained"
                     color="success"
@@ -129,10 +136,12 @@ const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
                       marginLeft: "20px",
                       width: "150px",
                       padding: "10px",
+                      color: "white",
                     }}
                     variant="contained"
                     color="success"
                     href="/"
+                    onClick={handleLogOut}
                   >
                     Logout
                   </Button>

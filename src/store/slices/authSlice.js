@@ -20,7 +20,7 @@ const authSlice = createSlice({
     },
 
     loginSuccess(state, action) {
-      saveUserToken(action.payload);
+      saveUserToken(action.payload.data.token);
       return {
         ...state,
         loading: false,
