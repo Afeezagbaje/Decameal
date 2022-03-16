@@ -8,7 +8,9 @@ const SubscriberNotification = () => {
         padding: "1em",
         backgroundColor: "purple",
       }}
-    ></Box>
+    >
+      hello word
+    </Box>
   );
 };
 

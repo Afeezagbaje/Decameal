@@ -1,6 +1,10 @@
-import React from "react";
+
 import { Box, Typography } from "@mui/material";
 import DietButton from "./DietButton";
+import React from "react";
+
+
+
 const DietContent = () => {
   return (
     <Box>

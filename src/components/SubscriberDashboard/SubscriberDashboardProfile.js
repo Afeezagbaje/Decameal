@@ -165,7 +165,7 @@ const SubscriberDashboardProfile = ({
                   {" "}
                   {Text7
                     ? Text7
-                    : "Ground egusi (or pumpkin seeds) is the main ingredient. Other ingredients include red palm oil, African crayfish, meats and fish, seasoning, hot pepper and some form of leafy greens."}
+                    : "We are what we Eat"}
                 </Box>
               </Box>
             </div>
@@ -194,7 +194,6 @@ const SubscriberDashboardProfile = ({
         </Box>
         <Box
           style={{
-            // backgroundColor: "#fff",
             width: "246px",
             marginTop: "7px",
           }}
@@ -225,10 +224,10 @@ const SubscriberDashboardProfile = ({
                 <Typography style={{ textAlign: "left" }}>
                   {Text10
                     ? Text10
-                    : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do"}
+                    : "A well-balanced diet could improve your mood and your overall health. "}
                   {Text12
                     ? Text12
-                    : "eiusmod tempor incididunt ut labore et dolore magnqua."}
+                    : "You are what you Eat!"}
                 </Typography>
               </Box>
             </>
