@@ -5,8 +5,6 @@ import { ReactComponent as SmallLessIcon } from "./svg/small-left-caret.svg";
 import { ReactComponent as BigLessIcon } from "./svg/big-left-caret.svg";
 import { ReactComponent as DropdownIcon } from "./svg/dropdown-caret.svg";
 import Footer from "../dashboard/footer/subscriberFooter";
-import DashboardSearchBar from "../dashboard/searchBar/subscriberSearchBar";
-
 
 const SubscriberDashboardProfile = ({
   Text1,
@@ -25,9 +23,6 @@ const SubscriberDashboardProfile = ({
 }) => {
   return (
     <>
-    <Box style={{ marginBottom: "63px" }}>
-        <DashboardSearchBar />
-        </Box>
       <Box
         style={{
           display: "flex",
@@ -53,6 +48,7 @@ const SubscriberDashboardProfile = ({
             <Box style={{ fontWeight: "bold" }}>
               {Text2 ? Text2 : "Week's Meal"}
             </Box>
+
             <Box
               style={{
                 width: "185px",
@@ -74,7 +70,9 @@ const SubscriberDashboardProfile = ({
                 }}
               />
             </Box>
+
           </Box>
+
           <Box
             style={{
               backgroundColor: "#fff",
@@ -189,6 +187,7 @@ const SubscriberDashboardProfile = ({
                 </Box>
             </div>
           ))}
+          </Box>
         </Box>
 
         <Box
