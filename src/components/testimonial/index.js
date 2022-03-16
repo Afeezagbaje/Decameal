@@ -11,8 +11,8 @@ const Content = ({ showIcons }) => {
       {showIcons && (
         <KeyboardArrowLeftIcon sx={{ color: "#979797", fontSize: "7rem" }} />
       )}
-      <Testimonial reviewer={"Rahim Khan"} avatar={author1} />
-      <Testimonial reviewer={"Usman Shand"} avatar={author2} />
+      <Testimonial reviewer={"Uche Rhan"} avatar={author1} />
+      <Testimonial reviewer={"Hassan Shola"} avatar={author2} />
       {showIcons && (
         <KeyboardArrowRightIcon
           sx={{ color: "#979797", fontSize: "7rem" }}

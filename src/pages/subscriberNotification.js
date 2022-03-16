@@ -148,8 +148,8 @@ const SubscriberNotification = () => (
                 <span> Head chef</span> <br />
                 <span>
                   {" "}
-                  Aenean commodo ligula eget dolor aenean massa. Cum sociis
-                  natoque
+                  I always had a fantasy of being a chef, because I like kitchen life.
+                  
                 </span>
               </div>
             </div>
@@ -161,12 +161,11 @@ const SubscriberNotification = () => (
               </div>
               <div className="main_three_text_1">
                 <br />
-                <span>PETRUS ONUKWU</span> <br /> <br />
-                <span> Head chef</span> <br />
+                <span>PATRICK IKHIDERO</span> <br /> <br />
+                <span> Director</span> <br />
                 <span>
                   {" "}
-                  Aenean commodo ligula eget dolor aenean massa. Cum sociis
-                  natoque
+                  Everything tastes better when we're together.
                 </span>
               </div>
             </div>
@@ -178,12 +177,11 @@ const SubscriberNotification = () => (
               </div>
               <div className="main_three_text_1">
                 <br />
-                <span>PETRUS ONUKWU</span> <br /> <br />
-                <span> Head chef</span> <br />
+                <span>PRAISE </span> <br /> <br />
+                <span> VP Kitchen</span> <br />
                 <span>
                   {" "}
-                  Aenean commodo ligula eget dolor aenean massa. Cum sociis
-                  natoque
+                  The kitchen is extra hot when you're in it.
                 </span>
               </div>
             </div>

@@ -165,7 +165,7 @@ const SubscriberDashboardProfile = ({
                   {" "}
                   {Text7
                     ? Text7
-                    : "Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"}
+                    : "Ground egusi (or pumpkin seeds) is the main ingredient. Other ingredients include red palm oil, African crayfish, meats and fish, seasoning, hot pepper and some form of leafy greens."}
                 </Box>
               </Box>
             </div>

@@ -35,21 +35,21 @@ const Meals = () => {
             <Cards
               image={Jollof_image}
               title="Jollof Rice"
-              body="Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"
+              body="Jollof, or jollof rice, is a rice dish from West Africa. "
             />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <Cards
               image={Egusi}
               title="Egusi Soup & Eba"
-              body="Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"
+              body="Egusi soup is an exotic hearty food that will satisfy your taste buds."
             />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <Cards
               image={Afang}
               title="Afang & Semo"
-              body="Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"
+              body="This very delicious and nourishing soup can go with any popular swallows"
             />
           </Grid>
         </Grid>

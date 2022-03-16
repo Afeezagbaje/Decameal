@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import DUMMY_DATA from "./data/mealConstant";
 import Cards from "../../components/Cards/Cards";
 import classes from "./meal.module.css";
 // import axios from "axios";

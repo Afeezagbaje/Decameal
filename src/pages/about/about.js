@@ -380,10 +380,10 @@ const AboutPage = () => {
                     }}
                   >
                     Fiona Ghalarger
-                    <br /> Brad is a great cook. He is able to prepare
+                    <br /> If you want to become a great chef,  
                     <br />
-                    every meal to its rhythm and prepare it
-                    <br /> for custermers himself
+                    you have to work with great chefs.
+                    <br /> And that's exactly what I did.
                   </Typography>
                 </Box>
               </Box>

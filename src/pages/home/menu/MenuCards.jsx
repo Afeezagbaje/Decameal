@@ -18,57 +18,57 @@ const MenuCards = () => {
       <Grid item xs={12} sm={6} md={3}>
       <Cards
         image={Pasta}
-        title="Spicey meatballs"
-        body="Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"
+        title="Pasta"
+        body="Pasta is a type of food typically made from an unleavened dough of wheat."
       />
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Cards
         image={FruitSalad}
-        title="Spicey meatballs"
-        body="Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"
+        title="Fruit Salad"
+        body="Fruit salad is a dish consisting of various kinds of fruit, sometimes served in a liquid."
       />
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Cards
         image={Cereal}
-        title="Spicey meatballs"
-        body="Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"
+        title="Cereal"
+        body="A cereal is any grass cultivated for the edible components of its grain."
       />
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Cards
         image={Orange}
-        title="Spicey meatballs"
-        body="Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"
+        title="Orange"
+        body="An orange is a fruit of various citrus species in the family Rutaceae."
       />
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Cards
         image={Spinach}
-        title="Spicey meatballs"
-        body="Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"
+        title="Spinach"
+        body="Spinach is a leafy green flowering plant native to central and western Asia."
       />
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Cards
         image={Samosa}
-        title="Spicey meatballs"
-        body="Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"
+        title="Samosa"
+        body="A samosa is a fried or baked pastry with a savory filling, including ingredients."
       />
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Cards
         image={Onion}
-        title="Spicey meatballs"
-        body="Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"
+        title="Onion"
+        body="The onion, also known as the bulb onion or common onion, is a vegetable."
       />
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Cards
         image={WeirdFood}
         title="Spicey meatballs"
-        body="Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"
+        body="They're made with lean beef, flavored with garlic and Sriracha, baked."
       />
       </Grid>
       </Grid>
