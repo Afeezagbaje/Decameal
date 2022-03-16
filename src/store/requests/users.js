@@ -1,12 +1,8 @@
-import axios, { handleAxiosError } from "../../axios";
+import axios, { handleAxiosError, headers } from "../../axios";
 
 export async function getUsers() {
   try {
-    const config = {
-      url: "/users",
-      method: "GET",      
-    };
-    const response = await axios(config);
+    const response = await axios.get("users/", headers());
     return response.data;
   } catch (error) {
     throw Error(handleAxiosError(error));
