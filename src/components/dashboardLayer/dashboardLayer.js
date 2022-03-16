@@ -1,20 +1,16 @@
 import { Box } from "@mui/system";
-import Nav from "../../components/nav/Nav";
+import Nav from "../nav/Nav";
 import React, { useState } from "react";
-import Sidebar from "../../components/sideBar/sidebar";
+import Sidebar from "../sideBar/sidebar";
 import { useMediaQuery } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import ViewSidebarOutlinedIcon from "@mui/icons-material/ViewSidebarOutlined";
-// import SubscriberDashboardProfile from "../../components/SubscriberDashboard/SubscriberDashboardProfile";
-// import MainContent from "../../components/dashboard/mainContent/mainContent";
-import SubscriberNotification from "../../components/dashboard/notification/subscriberNotification";
-// import SubscriberProfile from "../../components/dashboard/profile/subscriberProfile";
 
-const Dashboard = () => {
+const DashboardLayer = ({ children }) => {
   const isTabletView = useMediaQuery("(max-width:900px)");
   const [showSidebar, setShowSidebar] = useState(false);
   return (
-    <div style={{ backgroundColor: "#8EA739", height: "100vh" }}>
+    <div style={{ backgroundColor: "#8EA739", minHeight: "120vh" }}>
       <Nav
         showNotification={true}
         numOfNotification={3}
@@ -49,23 +45,20 @@ const Dashboard = () => {
         {!isTabletView && <Sidebar />}
         {showSidebar && isTabletView && (
           <>
-            <Sidebar />
+            <Sidebar styling={{position: "absolute", top: "10px", width: "250px"}} />
           </>
         )}
         <Box
           style={{
-            width: "72%",
+            width: isTabletView ? "100%" : "72%",
             marginLeft: "2rem",
           }}
         >
-          {/* <MainContent /> */}
-          <SubscriberNotification />
-          {/* <SubscriberProfile /> */}
-          {/* <SubscriberDashboardProfile /> */}
+          { children }
         </Box>
       </Box>
     </div>
   );
 };
 
-export default Dashboard;
+export default DashboardLayer;

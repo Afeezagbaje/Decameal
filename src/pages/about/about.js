@@ -214,8 +214,8 @@ const AboutPage = () => {
                       textAlign: "center",
                     }}
                   >
-                    Sarah Johnson
-                    <br /> Sarah is a great cook.
+                    Rose Johnson
+                    <br /> Rose is a great cook.
                     <br /> she is able to prepare every meal to its
                     <br /> rhythme
                   </Typography>
@@ -268,8 +268,8 @@ const AboutPage = () => {
                       textAlign: "center",
                     }}
                   >
-                    Mike Law
-                    <br /> Mike is one of the best
+                    Tobi Law
+                    <br /> Tobi is one of the best
                     <br /> chefs and the dishes he prepares are top
                     <br /> notch
                   </Typography>
@@ -324,8 +324,8 @@ const AboutPage = () => {
                       textAlign: "center",
                     }}
                   >
-                    Brad Hakimi
-                    <br /> Brad is a great cook. He is able to prepare
+                    Kingsley
+                    <br /> Kingsley is a great cook. He is able to prepare
                     <br />
                     every meal to its rhythm and prepare it
                     <br /> for custermers himself
@@ -379,11 +379,11 @@ const AboutPage = () => {
                       textAlign: "center",
                     }}
                   >
-                    Fiona Ghalarger
-                    <br /> Brad is a great cook. He is able to prepare
+                    Margret
+                    <br /> Margret is a great cook. He is able to prepare
                     <br />
                     every meal to its rhythm and prepare it
-                    <br /> for custermers himself
+                    <br /> for custermers herself
                   </Typography>
                 </Box>
               </Box>

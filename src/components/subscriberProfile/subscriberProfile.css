@@ -1,11 +1,11 @@
 
 
-.profile {
+/* .profile {
     background-image: url(https://res.cloudinary.com/neemathec/image/upload/v1646608159/Ellipse_1_1_ut69fn.png);
     background-repeat: no-repeat;
     height: 100%;
     border: 1px solid;
-  }
+  } */
 
   .card-container{
     display: block;
@@ -67,7 +67,6 @@
 .stack-field{
   align-items: right;
   justify-content: right;
-  weight:
 }
   .css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
     width: 100%;

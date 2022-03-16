@@ -1,17 +1,18 @@
 import React from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { getSavedUserToken } from "../utils";
-import Sidebar from "../components/sideBar/sidebar";
+import DashboardLayer from "../components/dashboardLayer/dashboardLayer";
 import { Box } from "@mui/system";
 
 const ProtectedRoute = () => {
   const isAuthenticated = !!getSavedUserToken();
   return isAuthenticated ? (
-    <Box sx={{ display: "flex" }}>
-      <Sidebar />
-      <Box sx={{ width: "100%" }}>
-        <Outlet />
-      </Box>
+    <Box>
+      <DashboardLayer>
+        <Box sx={{ width: "100%" }}>
+          <Outlet />
+        </Box>
+      </DashboardLayer>
     </Box>
   ) : (
     <Navigate to="/login" />
