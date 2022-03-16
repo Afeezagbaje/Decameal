@@ -38,8 +38,8 @@ const MenuContent = () => {
           fontFamily: "Poppins",
         }}
       >
-        Fish is one of the most wholesome foods that man can eat. In fact,
-        people have been eating fish throughout human
+        Our meals are for everyone who loves delicious yummy-cooked 
+        no assembly required food.
       </Typography>
       <Box
         sx={{

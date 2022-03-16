@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Cards from "../../components/Cards/Cards";
 import classes from "./meal.module.css";
+// import axios from "axios";
 import { Button, Box, Container } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { meals } from "../../store/slices/meals";
@@ -9,6 +10,7 @@ const MealSpread = () => {
   const dispatch = useAppDispatch();
   const {data} = useAppSelector((state) => state.meals);
 
+  
   useEffect(() => {
     dispatch(meals());
   }, [dispatch]);
