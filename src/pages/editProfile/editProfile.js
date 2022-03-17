@@ -10,6 +10,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { ModeEdit } from "@mui/icons-material";
+import { useAppSelector } from "../../store/hooks";
 
 const EditTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -79,9 +80,14 @@ const EditProfile = ({ image }) => {
   const [gender, setGender] = useState("Male");
   const [stack, setStack] = useState("Python");
   const isTabletView = useMediaQuery("(max-width:670px)");
-  const imageUrl = image
-    ? image
-    : "https://res.cloudinary.com/afeezagbaje/image/upload/v1647141584/DevBlogs/prince-akachi-4Yv84VgQkRM-unsplash_gvnrya.jpg";
+
+  const userProfileData = useAppSelector((store) => store.userProfile);
+  const { data } = userProfileData;
+  const userData = data.data;
+  const imageUrl =
+    userData && userData
+      ? userData.avatar
+      : "https://res.cloudinary.com/afeezagbaje/image/upload/v1647141584/DevBlogs/prince-akachi-4Yv84VgQkRM-unsplash_gvnrya.jpg";
 
   const handleGenderChange = (event) => {
     setGender(event.target.value);

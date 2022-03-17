@@ -9,7 +9,8 @@ import chef3 from "../../assets/chef2woman.png";
 import chef4 from "../../assets/secondman.png";
 import humanlike from "../../assets/humanlike.png";
 import knife from "../../assets/knife.png";
-import Nav from "../../components/nav/Nav"
+import Nav from "../../components/nav/Nav";
+import Footer from "../../components/footer/Footer";
 
 const AboutPage = () => {
   return (
@@ -392,6 +393,7 @@ const AboutPage = () => {
           </Grid>
         </Container>
       </Box>
+      <Footer />
     </>
   );
 };
