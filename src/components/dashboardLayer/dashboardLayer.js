@@ -1,23 +1,37 @@
+import React, { useEffect, useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+
 import { Box } from "@mui/system";
-import Nav from "../nav/Nav";
-import React, { useState } from "react";
-import Sidebar from "../sideBar/sidebar";
-import { useMediaQuery } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
+import Nav from "../nav/Nav";
+import Sidebar from "../sideBar/sidebar";
 import ViewSidebarOutlinedIcon from "@mui/icons-material/ViewSidebarOutlined";
+import { useMediaQuery } from "@mui/material";
+import { userProfile } from "../../store/slices/userProfileSlice";
 
 const DashboardLayer = ({ children }) => {
+  const dispatch = useAppDispatch();
   const isTabletView = useMediaQuery("(max-width:900px)");
   const [showSidebar, setShowSidebar] = useState(false);
+  const userProfileData = useAppSelector((store) => store.userProfile);
+  const { data } = userProfileData;
+  const userData = data.data;
+  const image =
+    userData && userData
+      ? userData.avatar
+      : "https://res.cloudinary.com/decameal/image/upload/v1646843048/DecaMealAvatar/avatar_lhnohu.jpg";
+
+  useEffect(() => {
+    dispatch(userProfile());
+  }, [dispatch]);
+
   return (
-    <div style={{ backgroundColor: "#8EA739", height: "120vh" }}>
+    <div style={{ backgroundColor: "#8EA739", minHeight: "120vh" }}>
       <Nav
         showNotification={true}
         numOfNotification={3}
         showAvatar={true}
-        avatar={
-          "https://res.cloudinary.com/decameal/image/upload/v1646843048/DecaMealAvatar/avatar_lhnohu.jpg"
-        }
+        avatar={image}
       />
       <Box
         style={{
@@ -45,7 +59,9 @@ const DashboardLayer = ({ children }) => {
         {!isTabletView && <Sidebar />}
         {showSidebar && isTabletView && (
           <>
-            <Sidebar styling={{position: "absolute", top: "10px", width: "250px"}} />
+            <Sidebar
+              styling={{ position: "absolute", top: "10px", width: "250px" }}
+            />
           </>
         )}
         <Box
@@ -54,7 +70,7 @@ const DashboardLayer = ({ children }) => {
             marginLeft: "2rem",
           }}
         >
-          { children }
+          {children}
         </Box>
       </Box>
     </div>

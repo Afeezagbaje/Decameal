@@ -1,6 +1,10 @@
-import React from "react";
+
 import { Box, Typography } from "@mui/material";
 import DietButton from "./DietButton";
+import React from "react";
+
+
+
 const DietContent = () => {
   return (
     <Box>
@@ -35,10 +39,9 @@ const DietContent = () => {
           marginTop: {xs: "34px"}
         }}
       >
-        Fish is one of the most wholesome foods that man can eat. In fact,
-        people have been eating fish throughout human history. These days, many
-        cooks yearn Fish is one of the most wholesome foods that man can eat. In
-        fact,
+        If you eat or drink more than your body needs, 
+        you'll put on weight because the energy you do not use 
+        is stored as fat. If you eat and drink too little, you'll lose weight.
       </Typography>
       <Typography
         variant="body2"
@@ -50,9 +53,9 @@ const DietContent = () => {
           marginTop: {xs: "34px"}
         }}
       >
-        Fish is one of the most wholesome foods that man can eat. In fact,
-        people have been eating fish throughout human history. These days, many
-        cooks yearn Fish is
+        It's recommended that you eat at least 5 portions of a 
+        variety of fruit and veg every day. They can be fresh, frozen, 
+        canned, dried or juiced.
       </Typography>
       <Box sx={{ display: { xs:"flex", md:"block"}, justifyContent: "center" }}>
       <DietButton />

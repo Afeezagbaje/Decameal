@@ -3,12 +3,16 @@ import createSagaMiddleware from "@redux-saga/core";
 import rootSaga from "./sagas";
 import users from "./slices/userSlice";
 import auth from "./slices/authSlice";
+import userProfile from "./slices/userProfileSlice";
+import meals from "./slices/meals";
 
 const sagaMiddleware = createSagaMiddleware();
 
 const reducer = combineReducers({
   users,
   auth,
+  userProfile,
+  meals,
 });
 
 const store = configureStore({

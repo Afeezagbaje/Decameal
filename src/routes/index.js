@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 
 import AboutPage from "../pages/about/about";
 import ForgotPassword from "../pages/forgotPassword/forgotPassword";
-import SubscriberProfile from "../components/subscriberProfile/subscriberProfile";
 import SubscriberDashboardProfile from "../components/SubscriberDashboard/SubscriberDashboardProfile";
 
 import Home from "../pages/home/LandingPage";
@@ -10,9 +9,10 @@ import KitchenProfile from "../pages/Kitchen_profile_dashboad/kitchen_profile";
 import Login from "../pages/login/login";
 import Reset from "../pages/resetPassword/ResetPassword";
 import SubscriberNotification from "../pages/subscriberNotification";
-import Meal from "../pages/mealPage/meal"
+import Meal from "../pages/mealPage/meal";
 import ProtectedRoute from "./ProtectedRoute";
-import UserProfile from "../pages/userProfile/userProfile";
+import UsersProfile from "../pages/userProfile/index";
+import EditProfile from "../pages/editProfile/editProfile";
 
 const App = () => (
   <Routes>
@@ -22,14 +22,14 @@ const App = () => (
     <Route path="/dashboard/" element={<ProtectedRoute />}>
       <Route path="" element={<SubscriberDashboardProfile />} />
       <Route path="notifications" element={<SubscriberNotification />} />
-      <Route path="profile" element={<UserProfile />} />
-      <Route path="edit-profile" element={<SubscriberProfile />} />
+      <Route path="profile" element={<UsersProfile />} />
+      <Route path="edit-profile" element={<EditProfile />} />
     </Route>
     <Route path="/reset-password" element={<Reset />} />
     <Route path="/about" element={<AboutPage />} />
     <Route path="/meals" element={<Meal />} />
 
-    <Route exact path="/kitchen-profile" element={<KitchenProfile />} />
+    <Route path="/kitchen-profile" element={<KitchenProfile />} />
   </Routes>
 );
 

@@ -1,26 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { saveUserId, getSavedUserId } from "../../utils";
 
-const userSlice = createSlice({
-  name: "user",
+const mealsSlice = createSlice({
+  name: "meals",
 
   initialState: {
     loading: false,
     errors: null,
     data: [],
-    id: getSavedUserId(),
   },
 
   reducers: {
-    user(state) {
+    meals(state) {
       return {
         ...state,
         loading: true,
       };
     },
 
-    userSuccess(state, action) {
-      saveUserId(action.payload[0]["id"]);
+    mealsSuccess(state, action) {
       return {
         ...state,
         loading: false,
@@ -29,7 +26,7 @@ const userSlice = createSlice({
       };
     },
     
-    userFailed(state, action) {
+    mealsFailed(state, action) {
       return {
         ...state,
         loading: false,
@@ -40,7 +37,7 @@ const userSlice = createSlice({
   },
 });
 
-export const { user, userSuccess, userFailed } =
-  userSlice.actions;
+export const { meals, mealsSuccess, mealsFailed } =
+  mealsSlice.actions;
 
-export default userSlice.reducer;
+export default mealsSlice.reducer;
