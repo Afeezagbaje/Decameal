@@ -1,13 +1,14 @@
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+
 import React from "react";
-import { useEffect } from "react";
-import { useAppSelector, useAppDispatch } from "../../store/hooks";
-import { userProfile } from "../../store/slices/userProfileSlice";
 import UserProfile from "./userProfile";
+import { useEffect } from "react";
+import { userProfile } from "../../store/slices/userProfileSlice";
 
 const UsersProfile = () => {
   const dispatch = useAppDispatch();
-  const kitchenProfile = useAppSelector((store) => store.userProfile);
-  const { data } = kitchenProfile;
+  const userProfileData = useAppSelector((store) => store.userProfile);
+  const { data } = userProfileData;
 
   const userData = data.data;
   

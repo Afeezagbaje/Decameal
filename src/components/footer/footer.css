@@ -64,7 +64,7 @@ hr {
   display: flex;
   justify-content: center;
 }
-img {
+.img {
   display: block;
   width: 50%;
   padding-bottom: 10px;
