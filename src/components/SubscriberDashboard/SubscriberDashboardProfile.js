@@ -28,6 +28,8 @@ const SubscriberDashboardProfile = ({
           display: "flex",
           gap: "29px",
           fontFamily: "poppins",
+          marginTop: "7rem",
+          marginBottom: "-1.5rem",
         }}
       >
         <Box
@@ -63,7 +65,7 @@ const SubscriberDashboardProfile = ({
               }}
             >
               <SmallLessIcon />
-              <Typography>{Text3 ? Text3 : "25-31/10/2021"}</Typography>
+              <Typography>{Text3 ? Text3 : "27/10/2021"}</Typography>
               <SmallLessIcon
                 style={{
                   transform: "rotate(180deg)",
@@ -173,18 +175,6 @@ const SubscriberDashboardProfile = ({
                       : "Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque"}
                   </Box>
                 </Box>
-
-                <Box
-                  style={{
-                    width: "188px",
-                    marginTop: "40px",
-                  }}
-                >
-                  {" "}
-                  {Text7
-                    ? Text7
-                    : "We are what we Eat"}
-                </Box>
             </div>
           ))}
           </Box>
@@ -222,9 +212,6 @@ const SubscriberDashboardProfile = ({
                   {Text10
                     ? Text10
                     : "A well-balanced diet could improve your mood and your overall health. "}
-                  {Text12
-                    ? Text12
-                    : "You are what you Eat!"}
                 </Typography>
               </Box>
             </>
