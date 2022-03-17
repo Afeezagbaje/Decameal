@@ -89,6 +89,12 @@ const EditProfile = ({ image }) => {
       ? userData.avatar
       : "https://res.cloudinary.com/afeezagbaje/image/upload/v1647141584/DevBlogs/prince-akachi-4Yv84VgQkRM-unsplash_gvnrya.jpg";
 
+  const Email = userData && userData ? userData.user.email : "";
+  const mobile_number = userData && userData ? userData.user.mobile_number : "";
+  const first_name = userData && userData ? userData.user.first_name : "";
+  const last_name = userData && userData ? userData.user.last_name : "";
+  const address = userData && userData ? userData.address : "";
+
   const handleGenderChange = (event) => {
     setGender(event.target.value);
   };
@@ -111,10 +117,10 @@ const EditProfile = ({ image }) => {
           sx={{
             width: isTabletView ? "100%" : "600px",
             minHeight: isTabletView ? "100vh" : "670px",
-            marginTop: isTabletView ? "50px" : "97px",
+            marginTop: isTabletView ? "50px" : "87px",
             marginLeft: isTabletView ? "0" : "auto",
             marginRight: isTabletView ? "0" : "auto",
-            padding: "50px 0",
+            padding: "50px 0 10px 0",
             backgroundColor: "white",
             borderRadius: "10px",
           }}
@@ -175,12 +181,14 @@ const EditProfile = ({ image }) => {
                       fullWidth
                       label="First Name"
                       variant="outlined"
+                      defaultValue={first_name}
                     />
                     <EditTextField
                       id="outlined-basic"
                       fullWidth
                       label="Last Name"
                       variant="outlined"
+                      defaultValue={last_name}
                     />
                   </Stack>
                 </Grid>
@@ -188,18 +196,9 @@ const EditProfile = ({ image }) => {
                   <EditTextField
                     id="outlined-basic"
                     fullWidth
-                    label="Username"
-                    variant="outlined"
-                    required
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <EditTextField
-                    id="outlined-basic"
-                    fullWidth
                     label="Email"
                     variant="outlined"
-                    required
+                    defaultValue={Email}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -208,6 +207,7 @@ const EditProfile = ({ image }) => {
                     fullWidth
                     label="Phone Number"
                     variant="outlined"
+                    defaultValue={mobile_number}
                   />
                 </Grid>
                 <Grid item>
@@ -259,6 +259,7 @@ const EditProfile = ({ image }) => {
                     fullWidth
                     label="Address"
                     variant="outlined"
+                    defaultValue={address}
                   />
                 </Grid>
               </Grid>
