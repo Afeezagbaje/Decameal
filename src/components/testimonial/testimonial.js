@@ -34,8 +34,9 @@ const Testimonial = ({ reviewer, avatar }) => (
         }}
       >
         {" "}
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page
+        Delicious meals are tasty, appetizing, scrumptious, yummy, 
+        luscious, delectable, mouth-watering, fit for a king, delightful, 
+        lovely, wonderful, pleasant, enjoyable, appealing, enchanting, charming.
       </Typography>
       <Typography
         variant="h5"

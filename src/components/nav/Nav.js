@@ -15,10 +15,15 @@ import ProfileDropDown from "./Profile_DropDown";
 import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import navimage from "../../assets/nav_image.png";
 import navnotification from "../../assets/bell_notify.png";
 
 const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
+
+  const handleLogOut = () => {
+    localStorage.clear();
+    window.location = "/";
+  }
+
   return (
     <AppBar
       sx={{
@@ -97,11 +102,12 @@ const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
                         </div>
                       </div>
                     </Badge>
-                    <div className="dropdown">
+                    <div className="dropdown" style={{ marginLeft: "40px", marginRight: "20px", borderRadius: "100%",}}>
                       <img
-                        src={navimage}
+                        src={avatar}
                         alt="profile"
-                        style={{ marginLeft: "40px", borderRadius: "100%" }}
+                        style={{ width: "46px", height: "40px"}}
+                        
                       />
                       <div className="dropdown-content">
                         <NotificationDropDown />
@@ -115,6 +121,7 @@ const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
                       marginLeft: "20px",
                       width: "150px",
                       padding: "10px",
+                      color: "white",
                     }}
                     variant="contained"
                     color="success"
@@ -129,10 +136,12 @@ const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
                       marginLeft: "20px",
                       width: "150px",
                       padding: "10px",
+                      color: "white",
                     }}
                     variant="contained"
                     color="success"
                     href="/"
+                    onClick={handleLogOut}
                   >
                     Logout
                   </Button>

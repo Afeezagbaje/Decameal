@@ -48,6 +48,7 @@ const Login = () => {
     dispatch(clearMsg());
   }, [dispatch, message, loading, errors]);
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const { email, password } = loginCredentials;
@@ -55,7 +56,7 @@ const Login = () => {
       setErrMsg("Email or Password cannot be blank");
       return;
     }
-    dispatch(login(loginCredentials));
+    dispatch(login(loginCredentials)); 
   };
 
   const handleCredentialChange = (e) => {

@@ -1,14 +1,16 @@
-import List from "../list/List";
 import "./footer.css";
+
 import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
+
+import AppStoreImg from "../../assets/img/App-Store-Badge.png";
 import Container from "@mui/material/Container";
+import CssBaseline from "@mui/material/CssBaseline";
+import GoogleStoreImg from "../../assets/img/googleplay.png";
 import Grid from "@mui/material/Grid";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import List from "../list/List";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import AppStoreImg from "../../assets/img/App-Store-Badge.png";
-import GoogleStoreImg from "../../assets/img/googleplay.png";
 
 export default function FixedContainer() {
   return (

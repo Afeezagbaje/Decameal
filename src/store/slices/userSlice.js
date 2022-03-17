@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { saveUserId, getSavedUserId } from "../../utils";
 
 const userSlice = createSlice({
   name: "user",
@@ -7,6 +8,7 @@ const userSlice = createSlice({
     loading: false,
     errors: null,
     data: [],
+    id: getSavedUserId(),
   },
 
   reducers: {
@@ -18,6 +20,7 @@ const userSlice = createSlice({
     },
 
     userSuccess(state, action) {
+      saveUserId(action.payload[0]["id"]);
       return {
         ...state,
         loading: false,
