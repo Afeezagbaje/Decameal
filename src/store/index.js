@@ -5,7 +5,6 @@ import users from "./slices/userSlice";
 import auth from "./slices/authSlice";
 import userProfile from "./slices/userProfileSlice";
 import meals from "./slices/meals";
-import userProfile from "./slices/userProfileSlice";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -14,7 +13,6 @@ const reducer = combineReducers({
   auth,
   userProfile,
   meals,
-  userProfile,
 });
 
 const store = configureStore({
