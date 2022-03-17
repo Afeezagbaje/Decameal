@@ -5,12 +5,19 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 const NotificationDropDown = () => {
+  const handleLogOut = () => {
+    localStorage.clear();
+    window.location = "/";
+  };
+
   return (
     <Box className="notification-dropdown-menu">
       <Link to="/dashboard">Dashboard </Link>
       <Link to="/profiles">Profile </Link>
-      <Link to="/tickets">Tickets </Link>
-      <Link to="/logout">Logout </Link>
+      <Link to="/dashboard">Tickets </Link>
+      <Link to="/">
+        <div onClick={handleLogOut}>Logout</div>{" "}
+      </Link>
     </Box>
   );
 };
