@@ -58,7 +58,7 @@ const UserProfile = ({
           sx={{
             width: isTabletView ? "100%" : "600px",
             height: isTabletView ? "100vh" : "670px",
-            marginTop: isTabletView ? "50px" : "97px",
+            marginTop: isTabletView ? "50px" : "87px",
             marginLeft: isTabletView ? "0" : "auto",
             marginRight: isTabletView ? "0" : "auto",
             backgroundColor: "white",
