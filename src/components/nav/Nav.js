@@ -102,11 +102,11 @@ const Nav = ({ showNotification, numOfNotification, showAvatar, avatar }) => {
                         </div>
                       </div>
                     </Badge>
-                    <div className="dropdown" style={{ marginLeft: "40px", marginRight: "20px", borderRadius: "100%",}}>
+                    <div className="dropdown" style={{ marginLeft: "40px", marginRight: "20px",}}>
                       <img
                         src={avatar}
                         alt="profile"
-                        style={{ width: "46px", height: "40px"}}
+                        style={{ width: "46px", height: "40px", borderRadius: "100%"}}
                         
                       />
                       <div className="dropdown-content">
