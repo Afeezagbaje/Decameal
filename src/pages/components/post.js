@@ -15,12 +15,12 @@ export default function Post (){
                   height: 56,
                   marginLeft: 4,
             }}/>
+           
+           
             <Box className="post-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore ete dolore 
-             magna aliqua. Ut enim ad minim veniam, quis nostrud 
-             exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-             consequat. Duis aute irure dolor in reprehenderit.
+            That’s exactly why they subscribed to you in the first place,
+             isn’t it? But here’s the catch, even when you aim at the bull’s eye,
+              chances are the users will not interact with it..
             </Box>
         </Box>
            
