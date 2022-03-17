@@ -70,7 +70,7 @@ hr {
   padding-bottom: 10px;
 }
 @media screen and (max-width: 899px) {
-  img {
+  .img {
     margin-left: auto;
     margin-right: auto;
   }

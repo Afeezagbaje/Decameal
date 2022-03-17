@@ -9,7 +9,7 @@ import KitchenProfile from "../pages/Kitchen_profile_dashboad/kitchen_profile";
 import Login from "../pages/login/login";
 import Reset from "../pages/resetPassword/ResetPassword";
 import SubscriberNotification from "../pages/subscriberNotification";
-import Meal from "../pages/mealPage/meal"
+import Meal from "../pages/mealPage/meal";
 import ProtectedRoute from "./ProtectedRoute";
 import UsersProfile from "../pages/userProfile/index";
 import EditProfile from "../pages/editProfile/editProfile";
@@ -29,7 +29,7 @@ const App = () => (
     <Route path="/about" element={<AboutPage />} />
     <Route path="/meals" element={<Meal />} />
 
-    <Route exact path="/kitchen-profile" element={<KitchenProfile />} />
+    <Route path="/kitchen-profile" element={<KitchenProfile />} />
   </Routes>
 );
 
